@@ -5,11 +5,21 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StarTrek")]
+
+//
+//  The AssemblyTitle attribute contains the friendly name for this assembly.
+//  The AssemblyTitle is the friendly name of this particular assembly. A friendly name can contain spaces and other punctuation.
+//
+[assembly: AssemblyTitle("Star Trek Classic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StarTrek")]
+
+//
+//  The AssemblyProduct attribute contains the product name of the product that this assembly is a part of.
+//  The product is the deliverable to the customer. "Acme Financial Analysis" is a product, so is "Acme Portfolio Analyzer".
+//
+[assembly: AssemblyProduct("Star Trek")]
 [assembly: AssemblyCopyright("Copyright ©  2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,5 +1,5 @@
 # Star Trek #
-A reworking of the 1971 Star Trek text game using C#
+A port of the 1971 Star Trek text game using C#.
 
 Based on:  
 http://www.codeproject.com/Articles/28228/Star-Trek-1971-Text-Game
@@ -15,7 +15,7 @@ The full source code is available here from GitHub:
 ## Projects ##
  - **StarTrekClassic:** Original BASIC code ported straight to C# (including line numbers).
  - **StarTrek1971:** Cleaned-up port, still resembles the original BASIC version.
- - **StarTrek1971.Net:** Console C# version of the classic 1971 Star Trek.
+ - **StarTrek1971.Net:** C# console app version of the classic 1971 Star Trek.
  - **SuperStarTrek:** TODO
 
 
@@ -145,7 +145,7 @@ _3270: Console.WriteLine("YOU CAN'T DESTROY STARS SILLY");
 _3280: goto _3420;
 ```
 
-To simulate line numbers, each line starts with a label consisting of an underscore followed by a number. That works fine for `GOTO`, but what about `GOSUB`? Examine line 2992. Subroutines were replaced with methods. That almost worked. In BASIC, you're not forced to `RETURN` from subroutines. You can leave them via `GOTO`. That was used only in the case that the player is destroyed to send them back to the beginning of the program to start over. I replaced that `GOTO` with a return statement that passes a flag back to the caller. The caller inspects the flag and jumps back to the program start if need be. I also discovered that at one point, there is a `GOTO` that jumps into a FOR loop. C# won't let you jump to a label in a sub-block of code. I transformed the FOR loop into a `GOTO` loop to make C# happy.
+To simulate line numbers, each line starts with a label consisting of an underscore followed by a number. That works fine for `GOTO`, but what about `GOSUB`? Examine line 2992. Subroutines were replaced with methods. That almost worked. In BASIC, you're not forced to `RETURN` from subroutines. You can leave them via `GOTO`. That was used only in the case that the player is destroyed to send them back to the beginning of the program to start over. I replaced that `GOTO` with a return statement that passes a flag back to the caller. The caller inspects the flag and jumps back to the program start if need be. I also discovered that at one point, there is a `GOTO` that jumps into a `FOR` loop. C# won't let you jump to a label in a sub-block of code. I transformed the `FOR` loop into a `GOTO` loop to make C# happy.
 
 All the variables in the BASIC program, including the arrays, are real number type. However, in BASIC, an array and a scalar can share the same name; the interpreter is able to sort it all out. But, C# is less kind. To solve the problem, I prefixed array names with underscores. Also, arrays in BASIC are indexed from `1` instead of `0`. To compensate, I increased the length of all arrays by 1. Index `0` is never used.
 

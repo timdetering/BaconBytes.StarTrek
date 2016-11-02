@@ -8,8 +8,8 @@
     <ProjectGuid>{8BEA5D1A-70DB-4261-BE92-0492E19C19E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StarTrek</RootNamespace>
-    <AssemblyName>StarTrek</AssemblyName>
+    <RootNamespace>StarTrekClassic</RootNamespace>
+    <AssemblyName>StarTrekClassic</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

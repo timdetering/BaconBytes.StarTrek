@@ -23,7 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StarTrek {
+namespace StarTrekClassic {
 
   public static class Program {
 
