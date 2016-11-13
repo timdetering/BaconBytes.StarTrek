@@ -25,7 +25,7 @@ namespace StarTrekClassic {
 
   public static class Program {
 
-    public static Random random = new Random();
+    public static Random random;
     public static double A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z;
     public static double[,] _A = new double[9, 9];
     public static double[] _B = new double[3];
@@ -43,6 +43,26 @@ namespace StarTrekClassic {
     public static double[,] _Z = new double[9, 9];
 
     public static void Main(string[] args) {
+        //
+        //  Parse the command-line arguments for the random number seed.
+        //
+        if (1 == args.Length)
+        {
+            int seed;
+            if (int.TryParse(args[0], out seed))
+            {
+                random = new Random(seed);
+            }
+            else
+            {
+                random = new Random();
+            }
+        }
+        else
+        {
+            random = new Random();
+        }
+
       _100: // **************************************************************
       _110: // ***
       _120: // ***     STAR TREK: BY MIKE MAYFIELD, CENTERLINE ENGINEERING
