@@ -234,6 +234,10 @@ namespace StarTrekClassic {
       _1295: if (A == 5) goto _3460;
       _1296: if (A == 6) goto _3560;
       _1297: if (A == 7) goto _4630;
+        if (A == 8)
+        {
+            return;
+        }
       _1300: Console.WriteLine();
       _1310: Console.WriteLine("   0 = SET COURSE");
       _1320: Console.WriteLine("   1 = SHORT RANGE SENSOR SCAN");
@@ -243,6 +247,7 @@ namespace StarTrekClassic {
       _1360: Console.WriteLine("   5 = SHIELD CONTROL");
       _1370: Console.WriteLine("   6 = DAMAGE CONTROL REPORT");
       _1380: Console.WriteLine("   7 = CALL ON LIBRARY COMPUTER");
+        Console.WriteLine("   8 = EXIT");
       _1390: Console.WriteLine();
       _1400: goto _1270;
       _1410: Console.Write("COURSE (1-9) ");
