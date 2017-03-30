@@ -1,23 +1,23 @@
 # Star Trek #
+<https://github.com/timdetering/BaconBytes.StarTrek>
+
 A port of the 1971 Star Trek text game using C#.
 
 Based on:  
-http://www.codeproject.com/Articles/28228/Star-Trek-1971-Text-Game
+<http://www.codeproject.com/Articles/28228/Star-Trek-1971-Text-Game>
 
 ## Source Code ##
-
 The full source code is available here from GitHub:
 
- - Clone the source: `git clone https://github.com/timdetering/BaconBytes.StarTrek`
- - Initialize the submodules: `git submodule update --init`
- - **TODO** Run `Protobuild.exe` to generate project files and solutions.
+ 1. Clone the source: `git clone https://github.com/timdetering/BaconBytes.StarTrek`
+ 2. Initialize the submodules: `git submodule update --init`
+ 3. **TODO** Run `Protobuild.exe` to generate project files and solutions.
 
 ## Projects ##
- - **StarTrekClassic:** Original BASIC code ported straight to C# (including line numbers).
- - **StarTrek1971:** Cleaned-up port, still resembles the original BASIC version.
- - **StarTrek1971.Net:** C# console app version of the classic 1971 Star Trek.
- - **SuperStarTrek:** TODO
-
+ * `src\BASIC` Original BASIC code ported straight to C# (including line numbers).
+ * `src\Net\StarTrekClassic` Cleaned-up port, still resembles the original BASIC version.
+ * `src\Net\StarTrekClassic.Net` C# object orientated console app version of the classic Star Trek.
+ * `src\Net\SuperStarTrek` **TODO**
 
 ## A Bit of History ##
 Two years after the original series was canceled in 1969, high school senior Mike Mayfield was busy keeping the *Star Trek* universe alive by feeding punched paper tape into a Sigma 7 in an effort to bring the crew of the Enterprise and the Klingon Empire to life on a 10 character-per-second teletype terminal. Soon after Mike ported his game to HP BASIC, it entered the public domain. From there, early computer enthusiasts enhanced and rewrote the game for every flavor of mini and microcomputer BASIC imaginable and beyond.
@@ -59,7 +59,7 @@ My first impression of the code was "what's with all the single letter variable 
 2140  T=T+1
 ```
 
-That line increments T. But, due to the caps, I feel like the code is screaming at me. ASSIGN THE SUM OF T AND 1 BACK TO T DAMN IT! Also, I'm so used to writing t++ or t += x that I forgot about the expanded notation. In fact, entering 7th grade having mastered BASIC, I found myself really confused when my math teacher introduced us to solving simultaneous equations. For instance, find the value of X in this equation:
+That line increments T. But, due to the caps, I feel like the code is screaming at me. ASSIGN THE SUM OF T AND 1 BACK TO T DAMN IT! Also, I'm so used to writing `t++` or `t += x` that I forgot about the expanded notation. In fact, entering 7th grade having mastered BASIC, I found myself really confused when my math teacher introduced us to solving simultaneous equations. For instance, find the value of X in this equation:
 
 ```
 X = 2X - 6
@@ -87,7 +87,7 @@ As I continued to examine the source, I found some statements that didn't make s
 After a bit of Googling, I found a cleaned up version that maintained the majority of Mike Mayfield's code. Some of it was reworked, probably to enable it to run on modern versions of BASIC. For instance, those cool IMAGE statements were dropped and replaced with sets of simpler `PRINT` commands. The variable names appear virtually identical, but at least they are all accounted for in this version.
 
 ## Porting the Game ##
-Next, I had to decide what language to port it to. Staring at that BASIC code reminded me that C# brought goto back into the mainstream. Would it be possible to do an exact line-by-line port from BASIC to C#? Apparently so... and the result is some of the sickest code I've ever keyed into a computer. Want a comparison? Here's a segment of BASIC code:
+Next, I had to decide what language to port it to. Staring at that BASIC code reminded me that C# brought go to back into the mainstream. Would it be possible to do an exact line-by-line port from BASIC to C#? Apparently so... and the result is some of the sickest code I've ever keyed into a computer. Want a comparison? Here's a segment of BASIC code:
 
 ```
 2950  PRINT "TORPEDO TRACK:"
@@ -155,12 +155,12 @@ When I started testing my port, I noticed some string formatting problems. Exami
 2726  PRINT TAB(41);"(";
 ```
 
-That means: print 41 spaces followed by left-parenthesis. That was easy to translate, but the intension was to push the left-parenthesis onto the next line by letting it wrap around the console. I cleaned some of this stuff up. There are also some tables that get printed in the game. I reformatted them a bit to make them easier to read.
+That means: print 41 spaces followed by left-parenthesis. That was easy to translate, but the intention was to push the left-parenthesis onto the next line by letting it wrap around the console. I cleaned some of this stuff up. There are also some tables that get printed in the game. I reformatted them a bit to make them easier to read.
 
 One other thing: notice that in this type of BASIC, `#` indicates not-equal-to. It took me a while to realize why they chose that symbol, `#` resembles `≠`.
 
 ## Entering the Star Trek Universe ##
-Now, I was ready to play the game. As I mentioned above, I never understood the rules before. Luckily, when you run the program, it gives you the option of viewing instructions. I studied them carefully. But, the only way to really understand what to do is to play the game. Here's a walkthrough:
+Now, I was ready to play the game. As I mentioned above, I never understood the rules before. Luckily, when you run the program, it gives you the option of viewing instructions. I studied them carefully. But, the only way to really understand what to do is to play the game. Here's a walk-through:
 
 ```
                           STAR TREK
@@ -205,7 +205,7 @@ LONG RANGE SENSOR SCAN FOR QUADRANT 5,2
 -------------------
 ```
 
-This table summarizes 9 quadrants. The center quadrant is your current quadrant. The digits indicate the number of Klingon ships, the number of starbases and the number of stars. In our quadrant, there are no Klingon ships and no starbases, but there are 5 stars. Stars act as annoying obstacles as I’ll demonstrate later on. South of us, there is a quadrant containing 1 Klingon ship. Let's head there. But, first we need to raise shields (option 5):
+This table summarizes 9 quadrants. The center quadrant is your current quadrant. The digits indicate the number of Klingon ships, the number of starbases and the number of stars. In our quadrant, there are no Klingon ships and no starbases, but there are 5 stars. Stars act as annoying obstacles as I'll demonstrate later on. South of us, there is a quadrant containing 1 Klingon ship. Let's head there. But, first we need to raise shields (option 5):
 
 ```
 COMMAND 5
@@ -213,7 +213,7 @@ ENERGY AVAILABLE = 3000
 NUMBER OF UNITS TO SHIELDS 500
 ```
 
-It asks me how much energy I want to devote to the shields. I entered `500`. If I run out of energy, I lose the game. Starbases replenish energy. They also restock photon torpedoes and repair damage. To see how much energy I have left, I’ll run a short range scan again (option 1):
+It asks me how much energy I want to devote to the shields. I entered `500`. If I run out of energy, I lose the game. Starbases replenish energy. They also restock photon torpedoes and repair damage. To see how much energy I have left, I'll run a short range scan again (option 1):
 
 ```
 COMMAND 1
@@ -229,7 +229,7 @@ COMMAND 1
 -=--=--=--=--=--=--=--=-
 ```
 
-Now, let’s head south. Navigation requires 2 parameters: direction and distance. It’s a polar coordinate system, but an unconventional one. Direction is specified using this:
+Now, let's head south. Navigation requires 2 parameters: direction and distance. It's a polar coordinate system, but an unconventional one. Direction is specified using this:
 
 ```
 4    3    2
@@ -250,14 +250,9 @@ Now, let’s head south. Navigation requires 2 parameters: direction and distanc
 
 
 ## References ##
- - **Star Trek Game History:** http://www3.sympatico.ca/maury/games/space/star_trek.html
- - **Wiki:** http://en.wikipedia.org/wiki/Star_Trek_%28text_game%29
- - **Mike Mayfield's Original Code:** http://www.dunnington.u-net.com/public/startrek/STTR1
- - **Enhanced Version:** http://newton.freehostia.com/hp/bas/TREKPT.txt
- - **Super Star Trek:** http://www.atariarchives.org/bcc1/showpage.php?page=275
- - **Kermit Murray's TREK73 page** http://www.kermitmurray.com/trek73/ and http://www.kermitmurray.com/trek73/old-index.html
-
-## License ##
-The original article, along with any associated source code and files, is licensed under [The GNU Lesser General Public License (LGPLv3)](http://www.opensource.org/licenses/lgpl-3.0.html).
-
-**TODO** New code is licensed under?
+ - **Star Trek Game History:** <http://www3.sympatico.ca/maury/games/space/star_trek.html>
+ - **Wiki:** <http://en.wikipedia.org/wiki/Star_Trek_%28text_game%29>
+ - **Mike Mayfield's Original Code:** <http://www.dunnington.u-net.com/public/startrek/STTR1>
+ - **Enhanced Version:** <http://newton.freehostia.com/hp/bas/TREKPT.txt>
+ - **Super Star Trek:** <http://www.atariarchives.org/bcc1/showpage.php?page=275>
+ - **Kermit Murray's TREK73 page** <http://www.kermitmurray.com/trek73> and <http://www.kermitmurray.com/trek73/old-index.html>

@@ -254,6 +254,9 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+# CodePlex
+BuildProcessTemplates/
+
 # GhostDoc plugin setting file
 *.GhostDoc.xml
 
@@ -289,8 +292,10 @@ paket-files/
 *.bak
 *.orig
 *~HEAD
+*_HEAD_*
 
 # Windows OS files:
+*.ini
 Thumbs.db
 
 # Byte-compiled / optimized / DLL files
@@ -363,6 +368,7 @@ docs/_build/
 
 # Source control files:
 *.vssscc
+.svn/
 
 # Diff / merge tool files:
 *.bak
