@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using BaconBytes.IO;
 
-namespace StarTrekClassic.Tests.PlayTests
+namespace StarTrekClassic.TestFramework
 {
     /// <summary>
     /// TODO: Playback console input
@@ -18,7 +18,6 @@ namespace StarTrekClassic.Tests.PlayTests
             //
             _originalInput = Console.In;
             _originalOutput = Console.Out;
-            //_debugWriter = new DebugTextWriter();
             _outputWriter = new StringWriter();
 
             _consoleOutput = new MultiCastTextWriter();

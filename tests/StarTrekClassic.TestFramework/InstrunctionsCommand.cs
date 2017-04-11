@@ -1,6 +1,6 @@
 using System;
 
-namespace StarTrekClassic.Tests.PlayTests
+namespace StarTrekClassic
 {
     public static class InstrunctionsCommand
     {

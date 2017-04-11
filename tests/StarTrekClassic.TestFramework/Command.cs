@@ -1,6 +1,6 @@
 using System;
 
-namespace StarTrekClassic.Test.PlayTests
+namespace StarTrekClassic
 {
     public static class Command
     {
@@ -25,9 +25,9 @@ namespace StarTrekClassic.Test.PlayTests
         public static readonly string FirePhasers = "3" + Environment.NewLine;
 
         /// <summary>
-        /// FIRE PHOTON TORPEDOES
+        /// Fire photon torpedo (4)
         /// </summary>
-        public static readonly string FirePhotonTorpedoes = "4" + Environment.NewLine;
+        public static readonly string FirePhotonTorpedo = "4" + Environment.NewLine;
 
         /// <summary>
         /// SHIELD CONTROL");

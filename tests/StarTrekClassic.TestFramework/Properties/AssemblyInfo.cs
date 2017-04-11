@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StarTrekClassicTests")]
+[assembly: AssemblyTitle("StarTrekClassic.TestFramework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StarTrekClassicTests")]
+[assembly: AssemblyProduct("StarTrekClassic.TestFramework")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("627d1a71-7257-41e0-be4c-d6833e48473d")]
+[assembly: Guid("35572fdf-7539-40d0-8bab-d2cef166e495")]
 
 // Version information for an assembly consists of the following four values:
 //

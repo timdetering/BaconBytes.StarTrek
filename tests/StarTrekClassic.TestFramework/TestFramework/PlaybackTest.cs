@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using NUnit.Framework;
 
-namespace StarTrekClassic.Tests.PlayTests
+namespace StarTrekClassic.TestFramework
 {
     public static class PlaybackTest
     {
@@ -11,9 +11,9 @@ namespace StarTrekClassic.Tests.PlayTests
         {
             Debug.Assert(null != entryPoint);
 
-            string expectedFilePath = Path.Combine(TestContext.CurrentContext.TestDirectory,
-                "ExpectedOutput",
-                expectedOutputFileName);
+            string expectedFilePath = Path.Combine(TestContext.CurrentContext.TestDirectory, "ExpectedOutput");
+            expectedFilePath = Path.Combine(expectedFilePath, expectedOutputFileName);
+
             string expectedOutput = File.ReadAllText(expectedFilePath);
 
             using (var test = new PlaybackRunner(input, false))
