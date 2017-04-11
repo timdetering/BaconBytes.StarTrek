@@ -25,10 +25,11 @@ namespace StarTrekClassic
 {
     public static class Program
     {
-        private static Random random;
+        private static int _condition;
+        private static Random _random;
+
         private static double A;
         private static double B;
-        private static double C;
         private static double D;
         private static double E;
         private static double F;
@@ -39,7 +40,6 @@ namespace StarTrekClassic
         private static double K;
         private static double L;
         private static double N;
-        private static double O;
         private static double P;
         private static double Q;
         private static double R;
@@ -74,16 +74,16 @@ namespace StarTrekClassic
                 int seed;
                 if (int.TryParse(args[0], out seed))
                 {
-                    random = new Random(seed);
+                    _random = new Random(seed);
                 }
                 else
                 {
-                    random = new Random();
+                    _random = new Random();
                 }
             }
             else
             {
-                random = new Random();
+                _random = new Random();
             }
 
             _100: // **************************************************************
@@ -111,11 +111,11 @@ namespace StarTrekClassic
             _213: A = (int)(Math.Abs(A));
             _215: Console.WriteLine("INITIALIZING...");
             _220: for(I = 0; I <= A; I += 1) {
-            _222:   J = random.NextDouble();
+            _222:   J = _random.NextDouble();
             _225: ;}
             _230: // *****  PROGRAM STARTS HERE *****
             _240: Console.WriteLine();
-            _290: T = (int)(random.NextDouble() * 20 + 20) * 100;
+            _290: T = (int)(_random.NextDouble() * 20 + 20) * 100;
             _291: _T[1] = T;
             _300: _T[2] = 30;
             _310: D = 0;
@@ -125,10 +125,10 @@ namespace StarTrekClassic
             _340: _S[4] = 200;
             _350: Q = 0;
             _351: S = 0;
-            _370: _Q[1] = (int)(random.NextDouble() * 8) + 1;
-            _380: _Q[2] = (int)(random.NextDouble() * 8) + 1;
-            _390: _S[1] = (int)(random.NextDouble() * 8) + 1;
-            _400: _S[2] = (int)(random.NextDouble() * 8) + 1;
+            _370: _Q[1] = (int)(_random.NextDouble() * 8) + 1;
+            _380: _Q[2] = (int)(_random.NextDouble() * 8) + 1;
+            _390: _S[1] = (int)(_random.NextDouble() * 8) + 1;
+            _400: _S[2] = (int)(_random.NextDouble() * 8) + 1;
             _410: // C array numbers in X,Y notation/display
             _420: // dir 1 = X+1,Y    right
             _421: _C[1,1] = 1;
@@ -162,7 +162,7 @@ namespace StarTrekClassic
             _491: _P[3] = 0;
             _500: for(I = 1; I <= 8; I += 1) {
             _510:   for(J = 1; J <= 8; J += 1) {
-            _520:     F = random.NextDouble();
+            _520:     F = _random.NextDouble();
             _530:     if (F > .98) goto _580;
             _540:     if (F > .95) goto _610;
             _550:     if (F > .8) goto _640;
@@ -176,13 +176,13 @@ namespace StarTrekClassic
             _630:     goto _660;
             _640:     _P[1] = 1;
             _650:     _P[3] = _P[3] + 1;
-            _660:     F = random.NextDouble();
+            _660:     F = _random.NextDouble();
             _670:     if (F > .96) goto _700;
             _680:     _B[1] = 0;
             _690:     goto _720;
             _700:     _B[1] = 1;
             _710:     _B[2] = _B[2] + 1;
-            _720:     _S[3] = (int)(random.NextDouble() * 8 + 1);
+            _720:     _S[3] = (int)(_random.NextDouble() * 8 + 1);
             _730:     _G[(int)I,(int)J] = _P[1] * 100 + _B[1] * 10 + _S[3];
             _740:     _Z[(int)I,(int)J] = 0;
             _750:   ;}
@@ -300,17 +300,17 @@ namespace StarTrekClassic
             _1620:   if (_D[(int)I] >= 0) goto _1640;
             _1630:   _D[(int)I] = _D[(int)I] + 1;
             _1640: ;}
-            _1650: if (random.NextDouble() > .2) goto _1810;
-            _1660: F = (int)(random.NextDouble() * 8 + 1);
-            _1670: if (random.NextDouble() >= .5) goto _1750;
-            _1680: _D[(int)F] = _D[(int)F] - (int)(random.NextDouble() * 5 + 1);
+            _1650: if (_random.NextDouble() > .2) goto _1810;
+            _1660: F = (int)(_random.NextDouble() * 8 + 1);
+            _1670: if (_random.NextDouble() >= .5) goto _1750;
+            _1680: _D[(int)F] = _D[(int)F] - (int)(_random.NextDouble() * 5 + 1);
             _1690: Console.WriteLine();
             _1700: Console.Write("DAMAGE CONTROL REPORT: ");
             _1710: _5610();
             _1720: Console.WriteLine(" DAMAGED");
             _1730: Console.WriteLine();
             _1740: goto _1810;
-            _1750: _D[(int)F] = _D[(int)F] + (int)(random.NextDouble() * 5 + 1);
+            _1750: _D[(int)F] = _D[(int)F] + (int)(_random.NextDouble() * 5 + 1);
             _1760: Console.WriteLine();
             _1770: Console.Write("DAMAGE CONTROL REPORT: ");
             _1780: _5610();
@@ -397,10 +397,10 @@ namespace StarTrekClassic
             _2640: E = E - X;
             _2650: if (_3790()) goto _4000;
             _2660: if (_D[7] >= 0) goto _2680;
-            _2670: X = X * random.NextDouble();
+            _2670: X = X * _random.NextDouble();
             _2680: for(I = 1; I <= 3; I += 1) {
             _2690: if (_K[(int)I, 3] <= 0) goto _2770;
-            _2700: H = (X / _P[1] / FND(0)) * (2 * random.NextDouble());
+            _2700: H = (X / _P[1] / FND(0)) * (2 * _random.NextDouble());
             _2710: _K[(int)I, 3] = _K[(int)I, 3] - H;
             _2720: Z = H;
             _2721: _9400();
@@ -637,13 +637,13 @@ namespace StarTrekClassic
 
         public static bool _3790()
         {
-            _3790: if (C != 3) goto _3820;
+            _3790: if (_condition != 3) goto _3820;
             _3800: Console.WriteLine("STAR BASE SHIELDS PROTECT THE ENTERPRISE");
             _3810: return false;
             _3820: if (_P[1] <= 0) goto _3910;
             _3830: for(I = 1; I <= 3; I += 1) {
             _3840:   if (_K[(int)I, 3] <= 0) goto _3900;
-            _3850:   H = (_K[(int)I, 3] / FND(0)) * (2 * random.NextDouble());
+            _3850:   H = (_K[(int)I, 3] / FND(0)) * (2 * _random.NextDouble());
             _3860:   S = S - H;
             _3870:   Z = H;
             _3871:   _9400();
@@ -672,7 +672,7 @@ namespace StarTrekClassic
             _4230: goto _4310;
             _4240: D = 1;
             _4249: // docked
-            _4250: C = 3;
+            _4250: _condition = 3;
             _4260: E = 3000;
             _4270: P = 10;
             _4280: Console.WriteLine("SHIELDS DROPPED FOR DOCKING PURPOSES");
@@ -681,13 +681,13 @@ namespace StarTrekClassic
             _4310: if (_P[1] > 0) goto _4350;
             _4320: if (E < K * .1) goto _4370;
             _4329: // green
-            _4330: C = 0;
+            _4330: _condition = 0;
             _4340: goto _4380;
             _4349: // red
-            _4350: C = 2;
+            _4350: _condition = 2;
             _4360: goto _4380;
             _4369: // yellow
-            _4370: C = 1;
+            _4370: _condition = 1;
             _4380: if (_D[2] >= 0) goto _4430;
             _4390: Console.WriteLine();
             _4400: Console.WriteLine("*** SHORT RANGE SENSORS ARE OUT ***");
@@ -701,9 +701,9 @@ namespace StarTrekClassic
             _4455: Console.WriteLine(" STARDATE  {0}", T);
             _4460: _9200();
             _4461: Console.Write(" CONDITION ");
-            _4462: if (C == 1) goto _4467;
-            _4463: if (C == 2) goto _4469;
-            _4464: if (C == 3) goto _4471;
+            _4462: if (_condition == 1) goto _4467;
+            _4463: if (_condition == 2) goto _4469;
+            _4464: if (_condition == 3) goto _4471;
             _4465: Console.WriteLine("GREEN");
             _4466: goto _4472;
             _4467: Console.WriteLine("YELLOW");
@@ -736,8 +736,8 @@ namespace StarTrekClassic
         public static void _5380()
         {
             _5378: // find-empty-location sub, strings removed
-            _5380: F = (int)(random.NextDouble() * 8 + 1);
-            _5390: G = (int)(random.NextDouble() * 8 + 1);
+            _5380: F = (int)(_random.NextDouble() * 8 + 1);
+            _5390: G = (int)(_random.NextDouble() * 8 + 1);
             _5400: if (_A[(int)F, (int)G] != 0) goto _5380;
             _5410: return;
         }
