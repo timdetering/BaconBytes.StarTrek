@@ -25,22 +25,44 @@ namespace StarTrekClassic
 {
     public static class Program
     {
-        public static Random random;
-        public static double A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z;
-        public static double[,] _A = new double[9, 9];
-        public static double[] _B = new double[3];
-        public static double[,] _C = new double[10, 3];
-        public static double[] _D = new double[10];
-        public static double[,] _G = new double[9, 9];
-        public static double[,] _K = new double[4, 4];
-        public static double[] _N = new double[4];
-        public static double[] _P = new double[4];
-        public static double[] _Q = new double[3];
-        public static double[] _S = new double[5];
-        public static double[] _T = new double[3];
-        public static double[] _V = new double[7];
-        public static double[] _X = new double[3];
-        public static double[,] _Z = new double[9, 9];
+        private static Random random;
+        private static double A;
+        private static double B;
+        private static double C;
+        private static double D;
+        private static double E;
+        private static double F;
+        private static double G;
+        private static double H;
+        private static double I;
+        private static double J;
+        private static double K;
+        private static double L;
+        private static double N;
+        private static double O;
+        private static double P;
+        private static double Q;
+        private static double R;
+        private static double S;
+        private static double T;
+        private static double W;
+        private static double X;
+        private static double Y;
+        private static double Z;
+        private static double[,] _A = new double[9, 9];
+        private static double[] _B = new double[3];
+        private static double[,] _C = new double[10, 3];
+        private static double[] _D = new double[10];
+        private static double[,] _G = new double[9, 9];
+        private static double[,] _K = new double[4, 4];
+        private static double[] _N = new double[4];
+        private static double[] _P = new double[4];
+        private static double[] _Q = new double[3];
+        private static double[] _S = new double[5];
+        private static double[] _T = new double[3];
+        private static double[] _V = new double[7];
+        private static double[] _X = new double[3];
+        private static double[,] _Z = new double[9, 9];
 
         public static void Main(string[] args)
         {
@@ -100,7 +122,6 @@ namespace StarTrekClassic
             _320: E = 3000;
             _321: K = E;
             _330: P = 10;
-            _331: M = P;
             _340: _S[4] = 200;
             _350: Q = 0;
             _351: S = 0;
