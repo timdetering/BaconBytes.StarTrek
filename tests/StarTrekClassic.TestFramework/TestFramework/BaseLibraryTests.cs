@@ -71,6 +71,5 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "LibraryTorpedoData3.txt");
         }
-
     }
 }

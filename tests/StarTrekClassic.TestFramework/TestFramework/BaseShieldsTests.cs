@@ -33,6 +33,5 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "Shields2.txt");
         }
-
     }
 }

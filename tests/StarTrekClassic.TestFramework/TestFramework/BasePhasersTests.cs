@@ -40,6 +40,5 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "FirePhasers3.txt");
         }
-
     }
 }

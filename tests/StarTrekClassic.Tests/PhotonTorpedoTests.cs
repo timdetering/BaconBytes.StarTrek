@@ -23,6 +23,5 @@ namespace StarTrekClassic.Tests
         {
             BasePhotonTorpedoTests.FireTorpedo3(Program.Main);
         }
-
     }
 }

@@ -21,7 +21,6 @@ namespace StarTrekClassic.TestFramework
             PlaybackTest.TestCase(entryPoint, input, "DamageControlReport1.txt");
         }
 
-
         public static void LongRangeSensorScan1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +

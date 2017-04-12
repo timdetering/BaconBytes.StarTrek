@@ -17,6 +17,5 @@ namespace StarTrekClassic.Tests
         {
             BaseShieldsTests.Shields2(Program.Main);
         }
-
     }
 }

@@ -1,18 +1,6 @@
 # To update run:
 #    curl -L https://gist.github.com/timdetering/bc1bccb602bd8a6a71b6/raw/ > ./.gitignore.gist
 #
-# Sections:
-#    General build
-#    Source control
-#    Diff / merge tools
-#    Platform file
-#    C#
-#    Python
-#    ...
-#    Misc
-#
-# Please insert in alphabetical order.
-#
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Dd]ebug/
@@ -291,7 +279,7 @@ paket-files/
 # Diff / merge tool files:
 *.bak
 *.orig
-*~HEAD
+*~HEAD*
 *_HEAD_*
 
 # Windows OS files:

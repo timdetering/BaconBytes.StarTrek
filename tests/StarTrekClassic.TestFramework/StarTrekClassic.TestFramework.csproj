@@ -68,10 +68,10 @@
     <Content Include="ExpectedOutput\FirePhasers1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ExpectedOutput\FirePhasers3.txt">
+    <Content Include="ExpectedOutput\FirePhasers2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ExpectedOutput\FirePhasers2.txt">
+    <Content Include="ExpectedOutput\FirePhasers3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\FirePhotonTorpedo1.txt">

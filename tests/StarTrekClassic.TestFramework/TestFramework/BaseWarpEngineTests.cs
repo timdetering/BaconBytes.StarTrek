@@ -35,6 +35,5 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "SetCourse3.txt");
         }
-
     }
 }

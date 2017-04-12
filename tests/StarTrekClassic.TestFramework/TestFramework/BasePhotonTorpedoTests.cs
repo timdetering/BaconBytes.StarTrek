@@ -39,6 +39,5 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "FirePhotonTorpedo3.txt");
         }
-
     }
 }
