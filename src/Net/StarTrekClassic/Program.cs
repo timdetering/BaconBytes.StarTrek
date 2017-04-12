@@ -329,9 +329,7 @@ namespace StarTrekClassic
             _1940: if (_S[1] < .5 || _S[1] >= 8.5 || _S[2] < .5 || _S[2] >= 8.5) goto _2170;
             _1960: if (_A[(int)(_S[1] + .5), (int)(_S[2] + .5)] == 0) goto _2070;
             _2031: Console.Write("WARP ENGINES SHUTDOWN AT SECTOR");
-            _2032: _V[4] = _S[1];
-            _2033: _V[5] = _S[2];
-            _2034: _9000();
+            PrintCoordinates(_S[1], _S[2]);
             _2035: Console.WriteLine("DUE TO BAD NAVIGATION");
             _2040: _S[1] = _S[1] - _X[1];
             _2050: _S[2] = _S[2] - _X[2];
@@ -365,9 +363,7 @@ namespace StarTrekClassic
             _2340: Console.WriteLine("LONG RANGE SENSORS ARE INOPERABLE");
             _2360: goto _1270;
             _2370: Console.Write("LONG RANGE SENSOR SCAN FOR QUADRANT");
-            _2371: _V[4] = _Q[1];
-            _2372: _V[5] = _Q[2];
-            _2373: _9000();
+            PrintCoordinates(_Q[1], _Q[2]);
             _2374: Console.WriteLine();
             _2375: // X,Y display
             _2380: Console.WriteLine("-------------------");
@@ -405,9 +401,7 @@ namespace StarTrekClassic
             _2720: Z = H;
             _2721: _9400();
             _2722: Console.Write(" UNIT HIT ON KLINGON AT SECTOR");
-            _2723: _V[4] = _K[(int)I, 1];
-            _2724: _V[5] = _K[(int)I, 2];
-            _2725: _9000();
+            PrintCoordinates(_K[(int)I, 1], _K[(int)I, 2]);
             _2726: Console.Write(Environment.NewLine + "   (");
             _2727: Z = Math.Max(0, _K[(int)I, 3]);
             _2728: _9400();
@@ -438,9 +432,7 @@ namespace StarTrekClassic
             _2960: X = X + _X[1];
             _2970: Y = Y + _X[2];
             _2980: if (X < .5 || X >= 8.5 || Y < .5 || Y >= 8.5) goto _3420;
-            _2990: _V[4] = X;
-            _2991: _V[5] = Y;
-            _2992: _9000();
+            PrintCoordinates(X, Y);
             _2993: Console.WriteLine();
             _3020: if (_A[(int)(X + .5), (int)(Y + .5)] != 0) goto _3080;
             _3060: goto _2960;
@@ -539,9 +531,7 @@ namespace StarTrekClassic
             _4720: Console.WriteLine("   2 = PHOTON TORPEDO DATA");
             _4730: goto _4660;
             _4740: Console.Write("COMPUTER RECORD OF GALAXY FOR QUADRANT");
-            _4741: _V[4] = _Q[1];
-            _4742: _V[5] = _Q[2];
-            _4743: _9000();
+            PrintCoordinates(_Q[1], _Q[2]);
             _4744: Console.WriteLine();
             _4770: Console.WriteLine("-------------------------------------------------");
             _4780: for(I = 1; I <= 8; I += 1) {
@@ -567,13 +557,9 @@ namespace StarTrekClassic
             _4950:   W = _K[(int)I, 2];
             _4960:   goto _5010;
             _4970:   Console.Write("YOU ARE AT QUADRANT");
-            _4971:   _V[4] = _Q[1];
-            _4972:   _V[5] = _Q[2];
-            _4973:   _9000();
+            PrintCoordinates(_Q[1], _Q[2]);
             _4974:   Console.Write("SECTOR");
-            _4975:   _V[4] = _S[1];
-            _4976:   _V[5] = _S[2];
-            _4977:   _9000();
+            PrintCoordinates(_S[1], _S[2]);
             _4978:   Console.WriteLine();
             _4990:   Console.Write("SHIP'S & TARGET'S COORDINATES ARE ");
             _5000:   Input(out A, out B, out X, out W);
@@ -624,9 +610,7 @@ namespace StarTrekClassic
         private static void PrintKlingonDestroyed(int index)
         {
             _3690: Console.Write("*** KLINGON AT SECTOR");
-            _3691: _V[4] = _K[index, 1];
-            _3692: _V[5] = _K[index, 2];
-            _3693: _9000();
+            PrintCoordinates(_K[index, 1], _K[index, 2]);
             _3694: Console.WriteLine("DESTROYED ***");
             _3710: _P[1] = _P[1] - 1;
             _3720: _P[3] = _P[3] - 1;
@@ -648,9 +632,7 @@ namespace StarTrekClassic
             _3870:   Z = H;
             _3871:   _9400();
             _3872:   Console.Write(" UNIT HIT ON ENTERPRISE FROM SECTOR");
-            _3873:   _V[4] = _K[(int)I, 1];
-            _3874:   _V[5] = _K[(int)I, 2];
-            _3875:   _9000();
+            PrintCoordinates(_K[(int)I, 1], _K[(int)I, 2]);
             _3876:   Console.Write(Environment.NewLine + "   (");
             _3877:   Z = Math.Max(0, S);
             _3878:   _9400();
@@ -713,15 +695,11 @@ namespace StarTrekClassic
             _4471: Console.WriteLine("DOCKED");
             _4472: _9200();
             _4473: Console.Write(" QUADRANT ");
-            _4474: _V[4] = _Q[1];
-            _4475: _V[5] = _Q[2];
-            _4476: _9000();
+            PrintCoordinates(_Q[1], _Q[2]);
             _4477: Console.WriteLine();
             _4480: _9200();
             _4481: Console.Write(" SECTOR   ");
-            _4482: _V[4] = _S[1];
-            _4483: _V[5] = _S[2];
-            _4484: _9000();
+            PrintCoordinates(_S[1], _S[2]);
             _4485: Console.WriteLine();
             _4490: _9200();
             _4495: Console.WriteLine(" ENERGY    {0}", (int)E);
@@ -872,18 +850,9 @@ namespace StarTrekClassic
             _6410: return;
         }
 
-        public static void _9000()
+        private static void PrintCoordinates(double x, double y)
         {
-            _8995: // sub to help convert PRINT USING, displays " x,y "
-            _8996: // coordinates (V[4],V[5])
-            _9000: Console.Write(" ");
-            _9010: L = (int)(_V[4] + .5);
-            _9020: _9700();
-            _9030: Console.Write(",");
-            _9040: L = (int)(_V[5] + .5);
-            _9050: _9700();
-            _9060: Console.Write(" ");
-            _9070: return;
+            Console.Write(" {0},{1} ", (int)(x + 0.5), (int)(y + 0.5));
         }
 
         public static void _9200()
