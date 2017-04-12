@@ -413,7 +413,7 @@ namespace StarTrekClassic
             _2728: _9400();
             _2729: Console.WriteLine(" LEFT)");
             _2740: if (_K[(int)I, 3] > 0) goto _2770;
-            _2750: _3690();
+            _2750: PrintKlingonDestroyed((int)I);
             _2760: if (_P[3] <= 0) goto _4040;
             _2770: ;}
             _2780: if (E < 0) goto _4000;
@@ -621,16 +621,16 @@ namespace StarTrekClassic
             _5320: goto _1270;
         }
 
-        public static void _3690()
+        private static void PrintKlingonDestroyed(int index)
         {
             _3690: Console.Write("*** KLINGON AT SECTOR");
-            _3691: _V[4] = _K[(int)I, 1];
-            _3692: _V[5] = _K[(int)I, 2];
+            _3691: _V[4] = _K[index, 1];
+            _3692: _V[5] = _K[index, 2];
             _3693: _9000();
             _3694: Console.WriteLine("DESTROYED ***");
             _3710: _P[1] = _P[1] - 1;
             _3720: _P[3] = _P[3] - 1;
-            _3740: _A[(int)(_K[(int)I, 1] + .5), (int)(_K[(int)I, 2] + .5)] = 0;
+            _3740: _A[(int)(_K[index, 1] + .5), (int)(_K[index, 2] + .5)] = 0;
             _3770: _G[(int)_Q[1], (int)_Q[2]] = _P[1] * 100 + _B[1] * 10 + _S[3];
             _3780: return;
         }
