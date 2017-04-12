@@ -14,10 +14,19 @@ The full source code is available here from GitHub:
  3. **TODO** Run `Protobuild.exe` to generate project files and solutions.
 
 ## Projects ##
- * `src\BASIC` Original BASIC code ported straight to C# (including line numbers).
- * `src\Net\StarTrekClassic` Cleaned-up port, still resembles the original BASIC version.
- * `src\Net\StarTrekClassic.Net` C# object orientated console app version of the classic Star Trek.
- * `src\Net\SuperStarTrek` **TODO**
+ * *STAR TREK* (`src\BASIC`) Original BASIC code.
+ * *StarTrek* (`src\Net\StarTrek`) The BASIC code ported straight to C# (including line numbers).
+ * *StarTrekClassic* (`src\Net\StarTrekClassic`) Cleaned-up port, still resembles the original BASIC version.
+ * *StarTrekClassic.Net* (`src\Net\StarTrekClassic-Net`) C# object orientated console app version of the classic Star Trek.
+ * *StarTrekClassic.Test* (`tests\StarTrekClassic.Test`) Shared test code.
+ * *StarTrekClassic.Test.PlayRecorder* (`tests\PlayRecorder`) Console application that records the players input.
+ * *StarTrekClassic.Test.PlayTests* (`tests\PlayTests`) **TODO**
+ * *StarTrekClassicTests* (`tests\StarTrekClassicTests`) NUnit play test cases.
+ * *StarTrekClassicNetTests* (`tests\StarTrekClassicNetTests`) NUnit play test cases.
+ * **TODO** (`src\Net\StarTrek`) Shared code between the different versions.
+ * **TODO** (`src\Net\SuperStarTrek`) **TODO**
+ * **TODO** (`src\Universal`) Universal app version.
+ * **TODO** (`src\WinForms`) Windows forms version.
 
 ## A Bit of History ##
 Two years after the original series was canceled in 1969, high school senior Mike Mayfield was busy keeping the *Star Trek* universe alive by feeding punched paper tape into a Sigma 7 in an effort to bring the crew of the Enterprise and the Klingon Empire to life on a 10 character-per-second teletype terminal. Soon after Mike ported his game to HP BASIC, it entered the public domain. From there, early computer enthusiasts enhanced and rewrote the game for every flavor of mini and microcomputer BASIC imaginable and beyond.

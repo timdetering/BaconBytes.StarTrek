@@ -234,7 +234,7 @@ namespace StarTrekClassic {
       _1295: if (A == 5) goto _3460;
       _1296: if (A == 6) goto _3560;
       _1297: if (A == 7) goto _4630;
-        if (A == 8)
+        if (A == 9)
         {
             return;
         }
@@ -247,7 +247,7 @@ namespace StarTrekClassic {
       _1360: Console.WriteLine("   5 = SHIELD CONTROL");
       _1370: Console.WriteLine("   6 = DAMAGE CONTROL REPORT");
       _1380: Console.WriteLine("   7 = CALL ON LIBRARY COMPUTER");
-        Console.WriteLine("   8 = EXIT");
+        Console.WriteLine("   9 = EXIT");
       _1390: Console.WriteLine();
       _1400: goto _1270;
       _1410: Console.Write("COURSE (1-9) ");
@@ -506,6 +506,10 @@ namespace StarTrekClassic {
       _4680: if (A == 0) goto _4740;
       _4681: if (A == 1) goto _4830;
       _4682: if (A == 2) goto _4890;
+        if (A == 9)
+        {
+            return;
+        }
       _4690: Console.WriteLine();
       _4692: Console.WriteLine("FUNCTIONS AVAILABLE FROM COMPUTER");
       _4700: Console.WriteLine("   0 = CUMULATIVE GALATIC RECORD");
@@ -579,7 +583,7 @@ namespace StarTrekClassic {
       _5243:   L = Math.Abs(X);
       _5244:   if (L > Math.Abs(A)) goto _5246;
       _5245:   L = Math.Abs(A);
-      _5246:   Console.Write("\n   (");
+      _5246:   Console.Write(Environment.NewLine + "   (");
       _5247:   _9700();
       _5248:   Console.Write(" WARP UNIT");
       _5249:   if (L == 1) goto _5251;
