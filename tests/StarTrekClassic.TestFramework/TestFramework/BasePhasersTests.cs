@@ -25,5 +25,21 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "FirePhasers2.txt");
         }
+
+        public static void FirePhasers3(Action<string[]> entryPoint)
+        {
+            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
+                           Command.ShieldControl +
+                           "52" + Environment.NewLine + //  Energy units
+                           Command.SetCourse +
+                           "2" + Environment.NewLine +  //  Course
+                           "1" + Environment.NewLine +  //  Warp factor
+                           Command.FirePhasers +
+                           "310" + Environment.NewLine +  //  Units of energy
+                           Command.Exit;
+
+            PlaybackTest.TestCase(entryPoint, input, "FirePhasers3.txt");
+        }
+
     }
 }

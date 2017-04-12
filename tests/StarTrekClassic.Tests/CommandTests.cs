@@ -25,12 +25,6 @@ namespace StarTrekClassic.Tests
         }
 
         [Test]
-        public void ShieldControl1()
-        {
-            BaseCommandTests.ShieldControl1(StarTrekClassic.Program.Main);
-        }
-
-        [Test]
         public void ShortRangeSensorScan1()
         {
             BaseCommandTests.ShortRangeSensorScan1(StarTrekClassic.Program.Main);

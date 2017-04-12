@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using BaconBytes.IO;
+using StarTrekClassic.TestFramework;
 
 namespace StarTrek.Test.PlayRecorder
 {
@@ -41,10 +42,8 @@ namespace StarTrek.Test.PlayRecorder
                     listener = new ConsoleListener();
                 }
 
-                StarTrekClassic.Program.Main(new string[]{ "1" });
-                //Debug.WriteLine(listener.ToString());
+                StarTrekClassic.Program.Main(PlaybackTest.ProgramArgs);
                 Debug.WriteLine(listener.InputRecord);
-
             }
             finally
             {

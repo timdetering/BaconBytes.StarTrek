@@ -31,17 +31,6 @@ namespace StarTrekClassic.TestFramework
             PlaybackTest.TestCase(entryPoint, input, "LongRangeSensorScan1.txt");
         }
 
-        public static void ShieldControl1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.ShieldControl +
-                           "3001" + Environment.NewLine + //  Invalid units
-                           "3000" + Environment.NewLine + //  Valid unit
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "ShieldControl1.txt");
-        }
-
         public static void ShortRangeSensorScan1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +

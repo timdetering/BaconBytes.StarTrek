@@ -17,5 +17,12 @@ namespace StarTrekClassic.Tests
         {
             BasePhasersTests.FirePhasers2(Program.Main);
         }
+
+        [Test]
+        public void FirePhasers3()
+        {
+            BasePhasersTests.FirePhasers3(Program.Main);
+        }
+
     }
 }

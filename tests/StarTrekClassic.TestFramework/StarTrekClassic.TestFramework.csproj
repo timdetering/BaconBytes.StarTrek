@@ -11,6 +11,8 @@
     <AssemblyName>StarTrekClassic.TestFramework</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,10 +37,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command.cs" />
@@ -48,6 +46,7 @@
     <Compile Include="TestFramework\BasePhasersTests.cs" />
     <Compile Include="TestFramework\BasePhotonTorpedoTests.cs" />
     <Compile Include="TestFramework\BaseLibraryTests.cs" />
+    <Compile Include="TestFramework\BaseShieldsTests.cs" />
     <Compile Include="TestFramework\BaseWarpEngineTests.cs" />
     <Compile Include="TestFramework\PlaybackRunner.cs" />
     <Compile Include="TestFramework\PlaybackTest.cs" />
@@ -67,6 +66,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\FirePhasers1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExpectedOutput\FirePhasers3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\FirePhasers2.txt">
@@ -114,7 +116,10 @@
     <Content Include="ExpectedOutput\SetCourse3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ExpectedOutput\ShieldControl1.txt">
+    <Content Include="ExpectedOutput\Shields1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExpectedOutput\Shields2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\ShortRangeSensorScan1.txt">

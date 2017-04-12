@@ -12,7 +12,8 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +53,10 @@
     <ProjectReference Include="..\..\src\Net\StarTrekClassic\StarTrekClassic.csproj">
       <Project>{8bea5d1a-70db-4261-be92-0492e19c19e5}</Project>
       <Name>StarTrekClassic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarTrekClassic.TestFramework\StarTrekClassic.TestFramework.csproj">
+      <Project>{35572fdf-7539-40d0-8bab-d2cef166e495}</Project>
+      <Name>StarTrekClassic.TestFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

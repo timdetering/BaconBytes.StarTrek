@@ -5,7 +5,7 @@ namespace StarTrekClassic
     public static class Command
     {
         /// <summary>
-        /// WARP ENGINE CONTROL (0)
+        /// Warp engine control (0)
         /// </summary>
         public static readonly WarpEngineControl SetCourse = new WarpEngineControl();
 
@@ -30,7 +30,7 @@ namespace StarTrekClassic
         public static readonly string FirePhotonTorpedo = "4" + Environment.NewLine;
 
         /// <summary>
-        /// SHIELD CONTROL");
+        /// Shield control (5)
         /// </summary>
         public static readonly string ShieldControl = "5" + Environment.NewLine;
 
