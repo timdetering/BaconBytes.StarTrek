@@ -2,7 +2,7 @@
 
 namespace StarTrekClassic.TestFramework
 {
-    public static class BaseSetCourseTests
+    public static class BaseWarpEngineTests
     {
         public static void SetCourse1(Action<string[]> entryPoint)
         {

@@ -48,7 +48,7 @@
     <Compile Include="TestFramework\BasePhasersTests.cs" />
     <Compile Include="TestFramework\BasePhotonTorpedoTests.cs" />
     <Compile Include="TestFramework\BaseLibraryTests.cs" />
-    <Compile Include="TestFramework\BaseSetCourseTests.cs" />
+    <Compile Include="TestFramework\BaseWarpEngineTests.cs" />
     <Compile Include="TestFramework\PlaybackRunner.cs" />
     <Compile Include="TestFramework\PlaybackTest.cs" />
   </ItemGroup>
