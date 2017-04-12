@@ -20,7 +20,7 @@ namespace StarTrekClassic
         public static readonly string LongRangeSensorScan = "2" + Environment.NewLine;
 
         /// <summary>
-        /// FIRE PHASERS
+        /// Fire phasers (3)
         /// </summary>
         public static readonly string FirePhasers = "3" + Environment.NewLine;
 

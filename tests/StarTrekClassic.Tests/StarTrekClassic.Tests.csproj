@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandTests.cs" />
-    <Compile Include="FirePhotonTorpedoTests.cs" />
     <Compile Include="LibraryTests.cs" />
+    <Compile Include="PhotonTorpedoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetCourseTests.cs" />
   </ItemGroup>

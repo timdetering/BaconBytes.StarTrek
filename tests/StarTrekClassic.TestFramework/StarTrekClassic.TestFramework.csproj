@@ -45,7 +45,7 @@
     <Compile Include="InstrunctionsCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestFramework\BaseCommandTests.cs" />
-    <Compile Include="TestFramework\BaseFirePhotonTorpedoTests.cs" />
+    <Compile Include="TestFramework\BasePhotonTorpedoTests.cs" />
     <Compile Include="TestFramework\BaseLibraryTests.cs" />
     <Compile Include="TestFramework\BaseSetCourseTests.cs" />
     <Compile Include="TestFramework\PlaybackRunner.cs" />
@@ -72,6 +72,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\FirePhotonTorpedo2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExpectedOutput\FirePhotonTorpedo3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\Instructions1.txt">

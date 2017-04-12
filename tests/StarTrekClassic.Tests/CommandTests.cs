@@ -24,8 +24,6 @@ namespace StarTrekClassic.Tests
             BaseCommandTests.Instructions1(StarTrekClassic.Program.Main);
         }
 
-
-
         [Test]
         public void LongRangeSensorScan1()
         {
@@ -43,6 +41,5 @@ namespace StarTrekClassic.Tests
         {
             BaseCommandTests.ShortRangeSensorScan1(StarTrekClassic.Program.Main);
         }
-
     }
 }
