@@ -386,7 +386,7 @@ namespace StarTrekClassic {
       _2723: _V[4] = _K[(int)I, 1];
       _2724: _V[5] = _K[(int)I, 2];
       _2725: _9000();
-      _2726: Console.Write("\n   (");
+      _2726: Console.Write(Environment.NewLine + "   (");
       _2727: Z = Math.Max(0, _K[(int)I, 3]);
       _2728: _9400();
       _2729: Console.WriteLine(" LEFT)");
@@ -627,7 +627,7 @@ namespace StarTrekClassic {
       _3873:   _V[4] = _K[(int)I, 1];
       _3874:   _V[5] = _K[(int)I, 2];
       _3875:   _9000();
-      _3876:   Console.Write("\n   (");
+      _3876:   Console.Write(Environment.NewLine + "   (");
       _3877:   Z = Math.Max(0, S);
       _3878:   _9400();
       _3879:   Console.WriteLine(" LEFT)");
