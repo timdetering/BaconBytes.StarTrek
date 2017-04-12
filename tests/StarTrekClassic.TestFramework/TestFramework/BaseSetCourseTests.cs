@@ -24,5 +24,17 @@ namespace StarTrekClassic.TestFramework
 
             PlaybackTest.TestCase(entryPoint, input, "SetCourse2.txt");
         }
+
+        public static void SetCourse3(Action<string[]> entryPoint)
+        {
+            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
+                           Command.SetCourse +
+                           "2" + Environment.NewLine +  //  Course
+                           "1" + Environment.NewLine +  //  Warp factor
+                           Command.Exit;
+
+            PlaybackTest.TestCase(entryPoint, input, "SetCourse3.txt");
+        }
+
     }
 }

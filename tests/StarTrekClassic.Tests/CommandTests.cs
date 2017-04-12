@@ -24,35 +24,7 @@ namespace StarTrekClassic.Tests
             BaseCommandTests.Instructions1(StarTrekClassic.Program.Main);
         }
 
-        [Test]
-        public void LibraryComputer1()
-        {
-            BaseCommandTests.LibraryComputer1(StarTrekClassic.Program.Main);
-        }
 
-        [Test]
-        public void LibraryGalaticRecord1()
-        {
-            BaseCommandTests.LibraryGalaticRecord1(StarTrekClassic.Program.Main);
-        }
-
-        [Test]
-        public void LibraryStatusReport1()
-        {
-            BaseCommandTests.LibraryStatusReport1(StarTrekClassic.Program.Main);
-        }
-
-        [Test]
-        public void LibraryTorpedoData1()
-        {
-            BaseCommandTests.LibraryTorpedoData1(StarTrekClassic.Program.Main);
-        }
-
-        [Test]
-        public void LibraryTorpedoData2()
-        {
-            BaseCommandTests.LibraryTorpedoData2(StarTrekClassic.Program.Main);
-        }
 
         [Test]
         public void LongRangeSensorScan1()

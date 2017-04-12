@@ -65,17 +65,9 @@ namespace StarTrekClassic
             public readonly string StatusReport = "1" + Environment.NewLine;
 
             /// <summary>
-            /// PHOTON TORPEDO DATA (2)
+            /// Photon torpedo data (2)
             /// </summary>
-            //public readonly string PhotonTorpedoData = "2" + Environment.NewLine;
             public readonly PhotonTorpedoData TorpedoData = new PhotonTorpedoData();
-
-
-            ///// <summary>
-            ///// Exit library command (3).
-            ///// </summary>
-            //public static readonly string Exit = "3" + Environment.NewLine;
-
 
             public override string ToString()
             {

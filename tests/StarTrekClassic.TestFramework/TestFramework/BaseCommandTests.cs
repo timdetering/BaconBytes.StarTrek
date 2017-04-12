@@ -32,61 +32,6 @@ namespace StarTrekClassic.TestFramework
             PlaybackTest.TestCase(entryPoint, input, "FirePhasers1.txt");
         }
 
-        public static void LibraryComputer1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.CallOnLibraryComputer +
-                           "3" + Environment.NewLine +  // Invalid command
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "LibraryComputer1.txt");
-        }
-
-        public static void LibraryGalaticRecord1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.CallOnLibraryComputer +
-                           Command.CallOnLibraryComputer.CumulativeGalaticRecord +
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "LibraryGalaticRecord1.txt");
-        }
-
-        public static void LibraryStatusReport1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.CallOnLibraryComputer +
-                           Command.CallOnLibraryComputer.StatusReport +
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "LibraryStatusReport1.txt");
-        }
-
-        public static void LibraryTorpedoData1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.CallOnLibraryComputer +
-                           Command.CallOnLibraryComputer.TorpedoData +
-                           "0" + Environment.NewLine +  // Invalid command
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "LibraryTorpedoData1.txt");
-        }
-
-        public static void LibraryTorpedoData2(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.CallOnLibraryComputer +
-                           Command.CallOnLibraryComputer.TorpedoData +
-                           Command.CallOnLibraryComputer.TorpedoData.UseCalculator +
-                           "1,1,1,1" + Environment.NewLine +  //
-                           "0" + Environment.NewLine +  // Invalid command
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "LibraryTorpedoData2.txt");
-        }
-
-
         public static void LongRangeSensorScan1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +

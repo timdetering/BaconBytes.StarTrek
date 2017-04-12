@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestFramework\BaseCommandTests.cs" />
     <Compile Include="TestFramework\BaseFirePhotonTorpedoTests.cs" />
+    <Compile Include="TestFramework\BaseLibraryTests.cs" />
     <Compile Include="TestFramework\BaseSetCourseTests.cs" />
     <Compile Include="TestFramework\PlaybackRunner.cs" />
     <Compile Include="TestFramework\PlaybackTest.cs" />
@@ -91,6 +92,9 @@
     <Content Include="ExpectedOutput\LibraryTorpedoData2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ExpectedOutput\LibraryTorpedoData3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="ExpectedOutput\LongRangeSensorScan1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -98,6 +102,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\SetCourse2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExpectedOutput\SetCourse3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExpectedOutput\ShieldControl1.txt">

@@ -17,5 +17,11 @@ namespace StarTrekClassic.Tests
         {
             BaseSetCourseTests.SetCourse2(Program.Main);
         }
+
+        [Test]
+        public void SetCourse3()
+        {
+            BaseSetCourseTests.SetCourse3(Program.Main);
+        }
     }
 }
