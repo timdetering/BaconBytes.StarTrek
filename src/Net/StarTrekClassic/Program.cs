@@ -103,7 +103,7 @@ namespace StarTrekClassic
             _190: Console.Write("ENTER 1 OR 2 FOR INSTRUCTIONS (ENTER 2 TO PAGE) ");
             _200: Input(out A);
             _205: if (A != 1 && A != 2) goto _210;
-            _207: _5820();
+            PrintInstructions(2 == A);
             _208: // randomize query to mix it up
             _210: Console.WriteLine();
             _211: Console.Write("ENTER SEED NUMBER ");
@@ -749,8 +749,10 @@ namespace StarTrekClassic
             _5667: return;
         }
 
-        public static void _5820()
+        private static void PrintInstructions(bool page)
         {
+            double temp;
+
             _5823: Console.WriteLine();
             _5824: Console.WriteLine();
             _5825: Console.WriteLine("     INSTRUCTIONS:");
@@ -775,11 +777,15 @@ namespace StarTrekClassic
             _5990: Console.WriteLine("  QUADRANT 5,6 TO 5,5 YOU WOULD USE COURSE 3, WARP");
             _6000: Console.WriteLine("  FACTOR 1. COORDINATES ARE SPECIFIED USING X,Y NOTATION");
             _6002: Console.WriteLine("  WITH X 1-8 FROM LEFT-RIGHT AND Y 1-8 FROM TOP-BOTTOM.");
-            _6004: if (A != 2) goto _6009;
-            _6005: Console.WriteLine();
-            _6006: Console.Write("ENTER A NUMBER TO CONTINUE...  ");
-            _6007: Input(out I);
-            _6008: Console.WriteLine();
+
+            if (true == page)
+            {
+                Console.WriteLine();
+                Console.Write("ENTER A NUMBER TO CONTINUE...  ");
+                Input(out temp);
+                Console.WriteLine();
+            }
+
             _6009: Console.WriteLine();
             _6010: Console.WriteLine("COMMAND 1 = SHORT RANGE SENSOR SCAN");
             _6020: Console.WriteLine("  PRINTS THE QUADRANT YOU ARE CURRENTLY IN, INCLUDING");
@@ -798,13 +804,18 @@ namespace StarTrekClassic
             _6130: Console.WriteLine("  SUITABLY LARGE NUMBERS OF ENERGY UNITS TO DEPLETE HIS ");
             _6140: Console.WriteLine("  SHIELD POWER.  KEEP IN MIND THAT WHEN YOU SHOOT AT");
             _6150: Console.WriteLine("  HIM, HE GONNA DO IT TO YOU TOO.");
-            _6151: if (A != 2) goto _6159;
-            _6152: for(I = 1; I <= 5; I += 1) {
-            _6153:   Console.WriteLine();
-            _6154: ;}
-            _6155: Console.Write("ENTER A NUMBER TO CONTINUE...  ");
-            _6156: Input(out I);
-            _6157: Console.WriteLine();
+
+            if (true == page)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine();
+                }
+                Console.Write("ENTER A NUMBER TO CONTINUE...  ");
+                Input(out temp);
+                Console.WriteLine();
+            }
+
             _6159: Console.WriteLine();
             _6160: Console.WriteLine("COMMAND 4 = PHOTON TORPEDO CONTROL");
             _6170: Console.WriteLine("  COURSE IS THE SAME AS USED IN WARP ENGINE CONTROL");
@@ -823,13 +834,18 @@ namespace StarTrekClassic
             _6275: Console.WriteLine("  A STATE OF REPAIR");
             _6280: Console.WriteLine("  LESS THAN ZERO SHOWS THAT THAT DEVICE IS TEMPORARALY");
             _6290: Console.WriteLine("  DAMAGED.");
-            _6291: if (A != 2) goto _6299;
-            _6292: for(I = 1; I <= 6; I += 1) {
-            _6293:   Console.WriteLine();
-            _6294: ;}
-            _6295: Console.Write("ENTER A NUMBER TO CONTINUE...  ");
-            _6296: Input(out I);
-            _6297: Console.WriteLine();
+
+            if (true == page)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    Console.WriteLine();
+                }
+                Console.Write("ENTER A NUMBER TO CONTINUE...  ");
+                Input(out temp);
+                Console.WriteLine();
+            }
+
             _6299: Console.WriteLine();
             _6300: Console.WriteLine("COMMAND 7 = LIBRARY COMPUTER");
             _6310: Console.WriteLine("  THE LIBRARY COMPUTER CONTAINS THREE OPTIONS:");
@@ -842,10 +858,15 @@ namespace StarTrekClassic
             _6380: Console.WriteLine("    OPTION 2 = PHOTON TORPEDO DATA");
             _6390: Console.WriteLine("     GIVES TRAJECTORY AND DISTANCE BETWEEN THE ENTERPRISE");
             _6400: Console.WriteLine("     AND ALL KLINGONS IN YOUR QUADRANT");
-            _6401: if (A != 2) goto _6408;
-            _6402: for(I = 1; I <= 9; I += 1) {
-            _6403:   Console.WriteLine();
-            _6404: ;}
+
+            if (true == page)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    Console.WriteLine();
+                }
+            }
+
             _6408: Console.WriteLine();
             _6410: return;
         }
