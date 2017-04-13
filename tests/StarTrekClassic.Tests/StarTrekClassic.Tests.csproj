@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandTests.cs" />
+    <Compile Include="InstrunctionsTests.cs" />
     <Compile Include="LibraryTests.cs" />
     <Compile Include="PhasersTests.cs" />
     <Compile Include="PhotonTorpedoTests.cs" />

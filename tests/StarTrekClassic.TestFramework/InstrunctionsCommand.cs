@@ -6,5 +6,7 @@ namespace StarTrekClassic
     {
         public static readonly string PrintAll = "1" + Environment.NewLine;
         public static readonly string PrintPage = "2" + Environment.NewLine;
+        public static readonly string Skip = "3" + Environment.NewLine;
+
     }
 }

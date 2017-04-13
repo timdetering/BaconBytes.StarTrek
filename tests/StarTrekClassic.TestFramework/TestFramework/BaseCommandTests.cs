@@ -4,14 +4,6 @@ namespace StarTrekClassic.TestFramework
 {
     public class BaseCommandTests
     {
-        public static void Instructions1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "Instructions1.txt");
-        }
-
         public static void DamageControlReport1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +

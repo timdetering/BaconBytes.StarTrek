@@ -13,12 +13,6 @@ namespace StarTrekClassic.Tests
         }
 
         [Test]
-        public void Instructions1()
-        {
-            BaseCommandTests.Instructions1(StarTrekClassic.Program.Main);
-        }
-
-        [Test]
         public void LongRangeSensorScan1()
         {
             BaseCommandTests.LongRangeSensorScan1(StarTrekClassic.Program.Main);
