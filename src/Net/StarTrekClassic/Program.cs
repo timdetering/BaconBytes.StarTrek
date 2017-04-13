@@ -36,7 +36,6 @@ namespace StarTrekClassic
         private static double G;
         private static double H;
         private static double I;
-        private static double J;
         private static double K;
         private static double L;
         private static double N;
@@ -86,16 +85,17 @@ namespace StarTrekClassic
                 _random = new Random();
             }
 
-            _100: // **************************************************************
-            _110: // ***
-            _120: // ***     STAR TREK: BY MIKE MAYFIELD, CENTERLINE ENGINEERING
-            _130: // ***
-            _140: // ***        TOTAL INTERACTION GAME - ORIG. 20 OCT 1972
-            _150: // ***
-            _160: // **************************************************************
-            _170: for(I = 1; I <= 20; I += 1) {
-            _172:   Console.WriteLine();
-            _174: ;}
+            // **************************************************************
+            // ***
+            // ***     STAR TREK: BY MIKE MAYFIELD, CENTERLINE ENGINEERING
+            // ***
+            // ***        TOTAL INTERACTION GAME - ORIG. 20 OCT 1972
+            // ***
+            // **************************************************************
+            for (int i = 1; i <= 20; i++)
+            {
+                Console.WriteLine();
+            }
             _180: Console.WriteLine("                          STAR TREK ");
             _182: Console.WriteLine();
             _183: Console.WriteLine();
@@ -110,9 +110,10 @@ namespace StarTrekClassic
             _212: Input(out A);
             _213: A = (int)(Math.Abs(A));
             _215: Console.WriteLine("INITIALIZING...");
-            _220: for(I = 0; I <= A; I += 1) {
-            _222:   J = _random.NextDouble();
-            _225: ;}
+            for (int i = 0; i <= A; i++)
+            {
+                _random.NextDouble();
+            }
             _230: // *****  PROGRAM STARTS HERE *****
             _240: Console.WriteLine();
             _290: T = (int)(_random.NextDouble() * 20 + 20) * 100;
@@ -160,8 +161,8 @@ namespace StarTrekClassic
             _450: Fill(_D, 0);
             _490: _B[2] = 0;
             _491: _P[3] = 0;
-            _500: for(I = 1; I <= 8; I += 1) {
-            _510:   for(J = 1; J <= 8; J += 1) {
+            _500: for(int i = 1; i <= 8; i++) {
+            _510:   for(int j = 1; j <= 8; j++) {
             _520:     F = _random.NextDouble();
             _530:     if (F > .98) goto _580;
             _540:     if (F > .95) goto _610;
@@ -183,8 +184,8 @@ namespace StarTrekClassic
             _700:     _B[1] = 1;
             _710:     _B[2] = _B[2] + 1;
             _720:     _S[3] = (int)(_random.NextDouble() * 8 + 1);
-            _730:     _G[(int)I,(int)J] = _P[1] * 100 + _B[1] * 10 + _S[3];
-            _740:     _Z[(int)I,(int)J] = 0;
+            _730:     _G[i, j] = _P[1] * 100 + _B[1] * 10 + _S[3];
+            _740:     _Z[i, j] = 0;
             _750:   ;}
             _760: ;}
             _770: _P[2] = _P[3];
@@ -219,9 +220,10 @@ namespace StarTrekClassic
             _890: Console.WriteLine("COMBAT AREA      CONDITION RED");
             _900: Console.WriteLine("   SHIELDS DANGEROUSLY LOW");
             _910: Fill(_K, 0);
-            _920: for (I = 1; I <= 3; I += 1) {
-            _930:   _K[(int)I, 3] = 0;
-            _940: ;}
+            for (int i = 1; i <= 3; i++)
+            {
+                _K[i, 3] = 0;
+            }
             _942: // A[x,y]:
             _943: // 0="   "
             _944: // 1="<*>"
@@ -230,21 +232,24 @@ namespace StarTrekClassic
             _947: // 4=" * "
             _950: Fill(_A, 0);
             _1000: _A[(int)(_S[1] + .5), (int)(_S[2] + .5)] = 1;
-            _1020: for(I = 1; I <= (int)_P[1]; I += 1) {
-            _1030:   _5380();
-            _1040:   _A[(int)F,(int)G] = 2;
-            _1080:   _K[(int)I, 1] = F;
-            _1090:   _K[(int)I, 2] = G;
-            _1100:   _K[(int)I, 3] = _S[4];
-            _1110: ;}
-            _1120: for(I = 1; I <= (int)_B[1]; I += 1) {
-            _1130:   _5380();
-            _1140:   _A[(int)F,(int)G] = 3;
-            _1180: ;}
-            _1190: for(I = 1; I <= (int)_S[3]; I += 1) {
-            _1200:   _5380();
-            _1210:   _A[(int)F,(int)G] = 4;
-            _1250: ;}
+            for (int i = 1; i <= (int)_P[1]; i++)
+            {
+                _5380();
+                _A[(int)F, (int)G] = 2;
+                _K[i, 1] = F;
+                _K[i, 2] = G;
+                _K[i, 3] = _S[4];
+            }
+            for (int i = 1; i <= (int)_B[1]; i++)
+            {
+                _5380();
+                _A[(int)F, (int)G] = 3;
+            }
+            for (int i = 1; i <= (int)_S[3]; i++)
+            {
+                _5380();
+                _A[(int)F, (int)G] = 4;
+            }
             _1260: _4120();
             _1270: Console.Write("COMMAND ");
             _1280: Input(out A);
@@ -296,9 +301,9 @@ namespace StarTrekClassic
             _1590: Console.WriteLine("SUGGEST YOU GET SOME FROM YOUR SHIELDS WHICH HAVE {0}", S);
             _1592: Console.WriteLine("UNITS LEFT");
             _1600: goto _1270;
-            _1610: for(I = 1; I <= 8; I += 1) {
-            _1620:   if (_D[(int)I] >= 0) goto _1640;
-            _1630:   _D[(int)I] = _D[(int)I] + 1;
+            _1610: for (int i = 1; i <= 8; i++) {
+            _1620:   if (_D[i] >= 0) goto _1640;
+            _1630:   _D[i] = _D[i] + 1;
             _1640: ;}
             _1650: if (_random.NextDouble() > .2) goto _1810;
             _1660: F = (int)(_random.NextDouble() * 8 + 1);
@@ -323,13 +328,13 @@ namespace StarTrekClassic
             _1885: R = (int)B;
             _1890: _X[1] = _C[(int)R, 1] + (_C[(int)(R+1), 1] - _C[(int)R, 1]) * (B - R);
             _1900: _X[2] = _C[(int)R, 2] + (_C[(int)(R+1), 2] - _C[(int)R, 2]) * (B - R);
-            _1910: for(I = 1; I <= N; I += 1) {
+            _1910: for(int i = 1; i <= N; i++) {
             _1920: _S[1] = _S[1] + _X[1];
             _1930: _S[2] = _S[2] + _X[2];
             _1940: if (_S[1] < .5 || _S[1] >= 8.5 || _S[2] < .5 || _S[2] >= 8.5) goto _2170;
             _1960: if (_A[(int)(_S[1] + .5), (int)(_S[2] + .5)] == 0) goto _2070;
             _2031: Console.Write("WARP ENGINES SHUTDOWN AT SECTOR");
-            PrintCoordinates(_S[1], _S[2]);
+                   PrintCoordinates(_S[1], _S[2]);
             _2035: Console.WriteLine("DUE TO BAD NAVIGATION");
             _2040: _S[1] = _S[1] - _X[1];
             _2050: _S[2] = _S[2] - _X[2];
@@ -367,13 +372,13 @@ namespace StarTrekClassic
             _2374: Console.WriteLine();
             _2375: // X,Y display
             _2380: Console.WriteLine("-------------------");
-            _2390: for(J = _Q[2] - 1; J <= _Q[2] + 1; J += 1) {
+            _2390: for(double j = _Q[2] - 1; j <= _Q[2] + 1; j++) {
             _2400:   Fill(_N, 0);
-            _2410:   for(I = _Q[1] - 1; I <= _Q[1] + 1; I += 1) {
-            _2420:     if (I < 1 || I > 8 || J < 1 || J > 8) goto _2460;
-            _2430:     _N[(int)(I - _Q[1] + 2)] = _G[(int)I, (int)J];
+            _2410:   for(double i = _Q[1] - 1; i <= _Q[1] + 1; i++) {
+            _2420:     if (i < 1 || i > 8 || j < 1 || j > 8) goto _2460;
+            _2430:     _N[(int)(i - _Q[1] + 2)] = _G[(int)i, (int)j];
             _2440:     if (_D[7] < 0) goto _2460;
-            _2450:     _Z[(int)I, (int)J] = _G[(int)I, (int)J];
+            _2450:     _Z[(int)i, (int)j] = _G[(int)i, (int)j];
             _2460:   ;}
             _2470:   Console.WriteLine("| {0:D3} | {1:D3} | {2:D3} |", (int)_N[1], (int)_N[2], (int)_N[3]);
             _2480:   Console.WriteLine("-------------------");
@@ -394,20 +399,20 @@ namespace StarTrekClassic
             _2650: if (_3790()) goto _4000;
             _2660: if (_D[7] >= 0) goto _2680;
             _2670: X = X * _random.NextDouble();
-            _2680: for(I = 1; I <= 3; I += 1) {
-            _2690: if (_K[(int)I, 3] <= 0) goto _2770;
-            _2700: H = (X / _P[1] / FND(0)) * (2 * _random.NextDouble());
-            _2710: _K[(int)I, 3] = _K[(int)I, 3] - H;
+            _2680: for( int i = 1; i <= 3; i++) {
+            _2690: if (_K[i, 3] <= 0) goto _2770;
+            _2700: H = X / _P[1] / FND(i) * (2 * _random.NextDouble());
+            _2710: _K[i, 3] = _K[i, 3] - H;
             _2720: Z = H;
             _2721: _9400();
             _2722: Console.Write(" UNIT HIT ON KLINGON AT SECTOR");
-            PrintCoordinates(_K[(int)I, 1], _K[(int)I, 2]);
+                   PrintCoordinates(_K[i, 1], _K[i, 2]);
             _2726: Console.Write(Environment.NewLine + "   (");
-            _2727: Z = Math.Max(0, _K[(int)I, 3]);
+            _2727: Z = Math.Max(0, _K[i, 3]);
             _2728: _9400();
             _2729: Console.WriteLine(" LEFT)");
-            _2740: if (_K[(int)I, 3] > 0) goto _2770;
-            _2750: PrintKlingonDestroyed((int)I);
+            _2740: if (_K[i, 3] > 0) goto _2770;
+                   PrintKlingonDestroyed(i);
             _2760: if (_P[3] <= 0) goto _4040;
             _2770: ;}
             _2780: if (E < 0) goto _4000;
@@ -532,14 +537,16 @@ namespace StarTrekClassic
             _4730: goto _4660;
             _4740: Console.Write("COMPUTER RECORD OF GALAXY FOR QUADRANT");
             PrintCoordinates(_Q[1], _Q[2]);
-            _4744: Console.WriteLine();
-            _4770: Console.WriteLine("-------------------------------------------------");
-            _4780: for(I = 1; I <= 8; I += 1) {
-            _4790:   Console.WriteLine("| {0:D3} | {1:D3} | {2:D3} | {3:D3} | {4:D3} | {5:D3} | {6:D3} | {7:D3} |",
-                        (int)_Z[1, (int)I], (int)_Z[2, (int)I], (int)_Z[3, (int)I], (int)_Z[4, (int)I], 
-                        (int)_Z[5, (int)I], (int)_Z[6, (int)I], (int)_Z[7, (int)I], (int)_Z[8, (int)I]);
-            _4800: Console.WriteLine("-------------------------------------------------");
-            _4810: ;}
+
+            Console.WriteLine();
+            Console.WriteLine("-------------------------------------------------");
+            for (int i = 1; i <= 8; i++)
+            {
+                Console.WriteLine("| {0:D3} | {1:D3} | {2:D3} | {3:D3} | {4:D3} | {5:D3} | {6:D3} | {7:D3} |",
+                    (int)_Z[1, i], (int)_Z[2, i], (int)_Z[3, i], (int)_Z[4, i],
+                    (int)_Z[5, i], (int)_Z[6, i], (int)_Z[7, i], (int)_Z[8, i]);
+                Console.WriteLine("-------------------------------------------------");
+            }
             _4820: goto _1270;
             _4830: Console.WriteLine();
             _4832: Console.WriteLine("   STATUS REPORT");
@@ -557,9 +564,9 @@ namespace StarTrekClassic
             _4950:   W = _K[(int)I, 2];
             _4960:   goto _5010;
             _4970:   Console.Write("YOU ARE AT QUADRANT");
-            PrintCoordinates(_Q[1], _Q[2]);
+                     PrintCoordinates(_Q[1], _Q[2]);
             _4974:   Console.Write("SECTOR");
-            PrintCoordinates(_S[1], _S[2]);
+                     PrintCoordinates(_S[1], _S[2]);
             _4978:   Console.WriteLine();
             _4990:   Console.Write("SHIP'S & TARGET'S COORDINATES ARE ");
             _5000:   Input(out A, out B, out X, out W);
@@ -625,14 +632,14 @@ namespace StarTrekClassic
             _3800: Console.WriteLine("STAR BASE SHIELDS PROTECT THE ENTERPRISE");
             _3810: return false;
             _3820: if (_P[1] <= 0) goto _3910;
-            _3830: for(I = 1; I <= 3; I += 1) {
-            _3840:   if (_K[(int)I, 3] <= 0) goto _3900;
-            _3850:   H = (_K[(int)I, 3] / FND(0)) * (2 * _random.NextDouble());
+            _3830: for(int i = 1; i <= 3; i++) {
+            _3840:   if (_K[i, 3] <= 0) goto _3900;
+            _3850:   H = _K[i, 3] / FND(i) * (2 * _random.NextDouble());
             _3860:   S = S - H;
             _3870:   Z = H;
             _3871:   _9400();
             _3872:   Console.Write(" UNIT HIT ON ENTERPRISE FROM SECTOR");
-            PrintCoordinates(_K[(int)I, 1], _K[(int)I, 2]);
+                     PrintCoordinates(_K[i, 1], _K[i, 2]);
             _3876:   Console.Write(Environment.NewLine + "   (");
             _3877:   Z = Math.Max(0, S);
             _3878:   _9400();
@@ -644,10 +651,10 @@ namespace StarTrekClassic
 
         public static void _4120()
         {
-            _4120: for(I = _S[1] - 1; I <= _S[1] + 1; I += 1) {
-            _4130:   for(J = _S[2] - 1; J <= _S[2] + 1; J += 1) {
-            _4140:     if (I < 1 || I > 8 || J < 1 || J > 8) goto _4200;
-            _4160:     if (_A[(int)(I + .5), (int)(J + .5)] == 3) goto _4240;
+            _4120: for(double i = _S[1] - 1; i <= _S[1] + 1; i++) {
+            _4130:   for(double j = _S[2] - 1; j <= _S[2] + 1; j++) {
+            _4140:     if (i < 1 || i > 8 || j < 1 || j > 8) goto _4200;
+            _4160:     if (_A[(int)(i + .5), (int)(j + .5)] == 3) goto _4240;
             _4200:   ;}
             _4210: ;}
             _4220: D = 0;
@@ -881,8 +888,8 @@ namespace StarTrekClassic
             _9195: // print display line from A[x,y]
             _9196: // y coord spec'd by V[3], incremented
             _9200: _V[3] = _V[3] + 1;
-            _9210: for(I = 1; I <= 8; I += 1) {
-            _9220:   A = _A[(int)I, (int)_V[3]];
+            _9210: for(int i = 1; i <= 8; i++) {
+            _9220:   A = _A[i, (int)_V[3]];
             _9230:   if (A == 1) goto _9240;
             _9232:   if (A == 2) goto _9242;
             _9233:   if (A == 3) goto _9244;
@@ -960,9 +967,9 @@ namespace StarTrekClassic
             _9980: return;
         }
 
-        public static double FND(double D)
+        private static double FND(int index)
         {
-            return Math.Sqrt(Math.Pow((_K[(int)I, 1] - _S[1]), 2) + Math.Pow((_K[(int)I, 2] - _S[2]), 2));
+            return Math.Sqrt(Math.Pow(_K[index, 1] - _S[1], 2) + Math.Pow(_K[index, 2] - _S[2], 2));
         }
 
         public static void Fill(double[] array, double value)
