@@ -29,7 +29,7 @@ namespace StarTrekClassic.TestFramework
         public static void FirePhasers3(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.ShieldControl +
+                           Command.Shields +
                            "52" + Environment.NewLine + //  Energy units
                            Command.SetCourse +
                            "2" + Environment.NewLine +  //  Course

@@ -15,7 +15,7 @@ namespace StarTrekClassic
         public static readonly string ShortRangeSensorScan = "1" + Environment.NewLine;
 
         /// <summary>
-        /// LONG RANGE SENSOR SCAN
+        /// Long rnage sensor scan (2).
         /// </summary>
         public static readonly string LongRangeSensorScan = "2" + Environment.NewLine;
 
@@ -32,7 +32,7 @@ namespace StarTrekClassic
         /// <summary>
         /// Shield control (5)
         /// </summary>
-        public static readonly string ShieldControl = "5" + Environment.NewLine;
+        public static readonly string Shields = "5" + Environment.NewLine;
 
         /// <summary>
         /// DAMAGE CONTROL REPORT
@@ -40,7 +40,7 @@ namespace StarTrekClassic
         public static readonly string DamageControlReport = "6" + Environment.NewLine;
 
         /// <summary>
-        /// CALL ON LIBRARY COMPUTER (7)
+        /// Use the library computer(7)
         /// </summary>
         public static readonly LibraryComputer CallOnLibraryComputer = new LibraryComputer();
 
@@ -55,7 +55,7 @@ namespace StarTrekClassic
         public class LibraryComputer
         {
             /// <summary>
-            /// CUMULATIVE GALATIC RECORD
+            /// Cumulative galatic record (0).
             /// </summary>
             public readonly string CumulativeGalaticRecord = "0" + Environment.NewLine;
 

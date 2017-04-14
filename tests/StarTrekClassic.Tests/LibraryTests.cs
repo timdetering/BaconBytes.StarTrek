@@ -19,6 +19,12 @@ namespace StarTrekClassic.Tests
         }
 
         [Test]
+        public void GalaticRecord2()
+        {
+            BaseLibraryTests.GalaticRecord2(StarTrekClassic.Program.Main);
+        }
+
+        [Test]
         public void StatusReport1()
         {
             BaseLibraryTests.StatusReport1(StarTrekClassic.Program.Main);

@@ -24,6 +24,19 @@ namespace StarTrekClassic.TestFramework
             PlaybackTest.TestCase(entryPoint, input, "LibraryGalaticRecord1.txt");
         }
 
+        public static void GalaticRecord2(Action<string[]> entryPoint)
+        {
+            string input = InstrunctionsCommand.PrintAll +
+                           PlaybackTest.Seed +
+                           Command.LongRangeSensorScan +
+                           Command.CallOnLibraryComputer +
+                           Command.CallOnLibraryComputer.CumulativeGalaticRecord +
+                           Command.Exit;
+
+            PlaybackTest.TestCase(entryPoint, input, "LibraryGalaticRecord2.txt");
+        }
+
+
         public static void StatusReport1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +

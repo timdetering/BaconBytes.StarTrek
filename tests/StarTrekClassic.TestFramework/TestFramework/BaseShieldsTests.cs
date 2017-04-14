@@ -11,7 +11,7 @@ namespace StarTrekClassic.TestFramework
         public static void Shields1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.ShieldControl +
+                           Command.Shields +
                            "3001" + Environment.NewLine + //  Invalid units
                            "3000" + Environment.NewLine + //  Valid unit
                            Command.Exit;
@@ -22,7 +22,7 @@ namespace StarTrekClassic.TestFramework
         public static void Shields2(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.ShieldControl +
+                           Command.Shields +
                            "100" + Environment.NewLine + //  Energy units
                            Command.SetCourse +
                            "2" + Environment.NewLine +  //  Course
