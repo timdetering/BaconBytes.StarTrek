@@ -4,15 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54A0C534-08EE-4248-B67F-576F3F44FAE4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StarTrekClassic.Tests</RootNamespace>
-    <AssemblyName>StarTrekClassic.Tests</AssemblyName>
+    <ProjectGuid>{AC0A77EB-2ECD-4987-AE4D-8ED009BC7834}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BaconBytes.StarTrekNet</RootNamespace>
+    <AssemblyName>BaconBytes.StarTrekNet</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +22,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Net $(TargetFrameworkVersion)\Release\</OutputPath>
@@ -30,36 +31,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\..\src\Net\packages\NUnit.3.6.1\lib\net35\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandTests.cs" />
-    <Compile Include="InstructionsTests.cs" />
-    <Compile Include="LibraryTests.cs" />
-    <Compile Include="LongRangeScanTests.cs" />
-    <Compile Include="PhasersTests.cs" />
-    <Compile Include="PhotonTorpedoTests.cs" />
+    <Compile Include="AlertState.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Coordinates.cs" />
+    <Compile Include="Enterprise.cs" />
+    <Compile Include="EntityType.cs" />
+    <Compile Include="MapCoordinates.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScenarioTests.cs" />
-    <Compile Include="ShieldsTests.cs" />
-    <Compile Include="ShortRangeScanTests.cs" />
-    <Compile Include="WarpEngineTests.cs" />
+    <Compile Include="Stardate.cs" />
+    <Compile Include="StarTrekGame.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Net\StarTrekClassic\StarTrekClassic.csproj">
-      <Project>{8bea5d1a-70db-4261-be92-0492e19c19e5}</Project>
-      <Name>StarTrekClassic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StarTrekClassic.TestFramework\StarTrekClassic.TestFramework.csproj">
-      <Project>{35572fdf-7539-40d0-8bab-d2cef166e495}</Project>
-      <Name>StarTrekClassic.TestFramework</Name>
+    <ProjectReference Include="..\..\..\..\BaconBytes.git\src\BaconBytes %28Classic%29\BaconBytes %28Classic%29.csproj">
+      <Project>{459d3546-09dd-4b54-8ef0-ccc71b267334}</Project>
+      <Name>BaconBytes %28Classic%29</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

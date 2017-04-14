@@ -4,7 +4,7 @@ using StarTrekClassic.TestFramework;
 namespace StarTrekClassic.Tests
 {
     [TestFixture]
-    public class InstrunctionsTests
+    public class InstructionsTests
     {
         [Test]
         public void PrintAll()
