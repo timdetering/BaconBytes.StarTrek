@@ -2,18 +2,18 @@
 
 namespace StarTrekClassic.TestFramework
 {
-    public static class BaseInstrunctionsTests
+    public static class Instructions
     {
-        public static void Print1(Action<string[]> entryPoint)
+        public static void PrintAll(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll +
                            PlaybackTest.Seed +
                            Command.Exit;
 
-            PlaybackTest.TestCase(entryPoint, input, "Instructions1.txt");
+            PlaybackTest.TestCase(entryPoint, input, "InstructionsPrintAll.txt");
         }
 
-        public static void Print2(Action<string[]> entryPoint)
+        public static void PrintPage(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintPage +
                            "1" + Environment.NewLine +
@@ -22,16 +22,16 @@ namespace StarTrekClassic.TestFramework
                            PlaybackTest.Seed +
                            Command.Exit;
 
-            PlaybackTest.TestCase(entryPoint, input, "Instructions2.txt");
+            PlaybackTest.TestCase(entryPoint, input, "InstructionsPrintPage.txt");
         }
 
-        public static void Print3(Action<string[]> entryPoint)
+        public static void Skip(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.Skip +
                            PlaybackTest.Seed +
                            Command.Exit;
 
-            PlaybackTest.TestCase(entryPoint, input, "Instructions3.txt");
+            PlaybackTest.TestCase(entryPoint, input, "InstructionsSkip.txt");
         }
     }
 }

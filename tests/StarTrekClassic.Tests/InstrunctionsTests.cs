@@ -7,21 +7,21 @@ namespace StarTrekClassic.Tests
     public class InstrunctionsTests
     {
         [Test]
-        public void Print1()
+        public void PrintAll()
         {
-            BaseInstrunctionsTests.Print1(Program.Main);
+            Instructions.PrintAll(Program.Main);
         }
 
         [Test]
-        public void Print2()
+        public void PrintPage()
         {
-            BaseInstrunctionsTests.Print2(Program.Main);
+            Instructions.PrintPage(Program.Main);
         }
 
         [Test]
-        public void Print3()
+        public void Skip()
         {
-            BaseInstrunctionsTests.Print3(Program.Main);
+            Instructions.Skip(Program.Main);
         }
     }
 }

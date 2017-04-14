@@ -2,7 +2,7 @@
 
 namespace StarTrekClassic.TestFramework
 {
-    public static class BasePhasersTests
+    public static class Phasers
     {
         public static void FirePhasers1(Action<string[]> entryPoint)
         {

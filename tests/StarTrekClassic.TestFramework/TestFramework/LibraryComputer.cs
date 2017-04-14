@@ -2,7 +2,7 @@
 
 namespace StarTrekClassic.TestFramework
 {
-    public static class BaseLibraryTests
+    public static class LibraryComputer
     {
         public static void Computer1(Action<string[]> entryPoint)
         {

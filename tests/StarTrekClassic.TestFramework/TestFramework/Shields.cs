@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace StarTrekClassic.TestFramework
 {
-    public class BaseShieldsTests
+    public class Shields
     {
         public static void Shields1(Action<string[]> entryPoint)
         {

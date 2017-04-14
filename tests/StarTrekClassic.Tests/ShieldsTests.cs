@@ -9,13 +9,13 @@ namespace StarTrekClassic.Tests
         [Test]
         public void Shields1()
         {
-            BaseShieldsTests.Shields1(Program.Main);
+            Shields.Shields1(Program.Main);
         }
 
         [Test]
         public void Shields2()
         {
-            BaseShieldsTests.Shields2(Program.Main);
+            Shields.Shields2(Program.Main);
         }
     }
 }

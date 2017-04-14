@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          STAR TREK 
+
+
+
+ENTER 1 OR 2 FOR INSTRUCTIONS (ENTER 2 TO PAGE) 3
+
+ENTER SEED NUMBER 1
+INITIALIZING...
+
+YOU MUST DESTROY 19 KINGONS IN 30 STARDATES WITH 5 STARBASES
+
+-=--=--=--=--=--=--=--=-
+    *                   
+    *              *     STARDATE  2900
+         <*>             CONDITION GREEN
+       *              *  QUADRANT  7,6 
+                         SECTOR    4,3 
+                         ENERGY    3000
+          *              SHIELDS   0
+       *                 PHOTON TORPEDOES 10
+-=--=--=--=--=--=--=--=-
+COMMAND 
+
+   0 = SET COURSE
+   1 = SHORT RANGE SENSOR SCAN
+   2 = LONG RANGE SENSOR SCAN
+   3 = FIRE PHASERS
+   4 = FIRE PHOTON TORPEDOES
+   5 = SHIELD CONTROL
+   6 = DAMAGE CONTROL REPORT
+   7 = CALL ON LIBRARY COMPUTER
+   9 = EXIT
+
+COMMAND 9

@@ -9,19 +9,25 @@ namespace StarTrekClassic.Tests
         [Test]
         public void DamageControlReport1()
         {
-            BaseCommandTests.DamageControlReport1(StarTrekClassic.Program.Main);
+            Commands.DamageControlReport1(Program.Main);
+        }
+
+        [Test]
+        public void ListCommands1()
+        {
+            Commands.ListCommands1(Program.Main);
         }
 
         [Test]
         public void LongRangeSensorScan1()
         {
-            BaseCommandTests.LongRangeSensorScan1(StarTrekClassic.Program.Main);
+            LongRangeScan.LongRangeSensorScan1(Program.Main);
         }
 
         [Test]
         public void ShortRangeSensorScan1()
         {
-            BaseCommandTests.ShortRangeSensorScan1(StarTrekClassic.Program.Main);
+            Commands.ShortRangeSensorScan1(Program.Main);
         }
     }
 }

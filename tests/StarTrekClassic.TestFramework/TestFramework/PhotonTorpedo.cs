@@ -2,7 +2,7 @@
 
 namespace StarTrekClassic.TestFramework
 {
-    public static class BasePhotonTorpedoTests
+    public static class PhotonTorpedo
     {
         public static void FireTorpedo1(Action<string[]> entryPoint)
         {

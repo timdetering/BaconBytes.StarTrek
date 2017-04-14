@@ -9,43 +9,43 @@ namespace StarTrekClassic.Tests
         [Test]
         public void Computer1()
         {
-            BaseLibraryTests.Computer1(StarTrekClassic.Program.Main);
+            LibraryComputer.Computer1(StarTrekClassic.Program.Main);
         }
 
         [Test]
         public void GalaticRecord1()
         {
-            BaseLibraryTests.GalaticRecord1(StarTrekClassic.Program.Main);
+            LibraryComputer.GalaticRecord1(StarTrekClassic.Program.Main);
         }
 
         [Test]
         public void GalaticRecord2()
         {
-            BaseLibraryTests.GalaticRecord2(StarTrekClassic.Program.Main);
+            LibraryComputer.GalaticRecord2(StarTrekClassic.Program.Main);
         }
 
         [Test]
         public void StatusReport1()
         {
-            BaseLibraryTests.StatusReport1(StarTrekClassic.Program.Main);
+            LibraryComputer.StatusReport1(StarTrekClassic.Program.Main);
         }
 
         [Test]
         public void TorpedoData1()
         {
-            BaseLibraryTests.TorpedoData1(StarTrekClassic.Program.Main);
+            LibraryComputer.TorpedoData1(StarTrekClassic.Program.Main);
         }
 
         [Test]
         public void TorpedoData2()
         {
-            BaseLibraryTests.TorpedoData2(StarTrekClassic.Program.Main);
+            LibraryComputer.TorpedoData2(StarTrekClassic.Program.Main);
         }
 
         [Test]
         public void TorpedoData3()
         {
-            BaseLibraryTests.TorpedoData3(StarTrekClassic.Program.Main);
+            LibraryComputer.TorpedoData3(StarTrekClassic.Program.Main);
         }
     }
 }

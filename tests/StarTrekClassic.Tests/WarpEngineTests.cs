@@ -9,19 +9,25 @@ namespace StarTrekClassic.Tests
         [Test]
         public void SetCourse1()
         {
-            BaseWarpEngineTests.SetCourse1(Program.Main);
+            WarpEngines.SetCourse1(Program.Main);
         }
 
         [Test]
         public void SetCourse2()
         {
-            BaseWarpEngineTests.SetCourse2(Program.Main);
+            WarpEngines.SetCourse2(Program.Main);
         }
 
         [Test]
         public void SetCourse3()
         {
-            BaseWarpEngineTests.SetCourse3(Program.Main);
+            WarpEngines.SetCourse3(Program.Main);
+        }
+
+        [Test]
+        public void SetCourse4()
+        {
+            WarpEngines.SetCourse4(Program.Main);
         }
     }
 }

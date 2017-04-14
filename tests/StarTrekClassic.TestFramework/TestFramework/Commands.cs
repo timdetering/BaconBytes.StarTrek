@@ -2,8 +2,18 @@
 
 namespace StarTrekClassic.TestFramework
 {
-    public class BaseCommandTests
+    public static class Commands
     {
+        public static void ListCommands1(Action<string[]> entryPoint)
+        {
+            string input = InstrunctionsCommand.Skip +
+                           PlaybackTest.Seed +
+                           Environment.NewLine +
+                           Command.Exit;
+
+            PlaybackTest.TestCase(entryPoint, input, "ListCommands1.txt");
+        }
+
         public static void DamageControlReport1(Action<string[]> entryPoint)
         {
             string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
@@ -11,15 +21,6 @@ namespace StarTrekClassic.TestFramework
                            Command.Exit;
 
             PlaybackTest.TestCase(entryPoint, input, "DamageControlReport1.txt");
-        }
-
-        public static void LongRangeSensorScan1(Action<string[]> entryPoint)
-        {
-            string input = InstrunctionsCommand.PrintAll + PlaybackTest.Seed +
-                           Command.LongRangeSensorScan +
-                           Command.Exit;
-
-            PlaybackTest.TestCase(entryPoint, input, "LongRangeSensorScan1.txt");
         }
 
         public static void ShortRangeSensorScan1(Action<string[]> entryPoint)

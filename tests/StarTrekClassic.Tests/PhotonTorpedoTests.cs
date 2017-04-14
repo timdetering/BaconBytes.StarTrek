@@ -9,19 +9,19 @@ namespace StarTrekClassic.Tests
         [Test]
         public void FirePhotonTorpedo1()
         {
-            BasePhotonTorpedoTests.FireTorpedo1(Program.Main);
+            PhotonTorpedo.FireTorpedo1(Program.Main);
         }
 
         [Test]
         public void FirePhotonTorpedo2()
         {
-            BasePhotonTorpedoTests.FireTorpedo2(Program.Main);
+            PhotonTorpedo.FireTorpedo2(Program.Main);
         }
 
         [Test]
         public void FirePhotonTorpedo3()
         {
-            BasePhotonTorpedoTests.FireTorpedo3(Program.Main);
+            PhotonTorpedo.FireTorpedo3(Program.Main);
         }
     }
 }
