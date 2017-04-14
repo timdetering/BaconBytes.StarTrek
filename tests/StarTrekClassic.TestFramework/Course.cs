@@ -6,6 +6,10 @@ namespace StarTrekClassic
     {
         public static readonly string Right = "1" + Environment.NewLine;
         public static readonly string UpRight = "2" + Environment.NewLine;
+
+        /// <summary>
+        /// Up course (3)
+        /// </summary>
         public static readonly string Up = "3" + Environment.NewLine;
         public static readonly string UpLeft = "4" + Environment.NewLine;
 
