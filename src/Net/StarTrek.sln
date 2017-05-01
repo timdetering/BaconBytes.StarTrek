@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarTrekClassic", "StarTrekClassic\StarTrekClassic.csproj", "{8BEA5D1A-70DB-4261-BE92-0492E19C19E5}"
 EndProject
@@ -20,8 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayRecorder", "..\..\tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project reference", "Project reference", "{82484978-3497-4A4C-92EB-D47118B06BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaconBytes (Classic)", "..\..\..\BaconBytes.git\src\BaconBytes (Classic)\BaconBytes (Classic).csproj", "{459D3546-09DD-4B54-8EF0-CCC71B267334}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarTrekClassic.TestFramework", "..\..\tests\StarTrekClassic.TestFramework\StarTrekClassic.TestFramework.csproj", "{35572FDF-7539-40D0-8BAB-D2CEF166E495}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarTrekClassic.Tests", "..\..\tests\StarTrekClassic.Tests\StarTrekClassic.Tests.csproj", "{54A0C534-08EE-4248-B67F-576F3F44FAE4}"
@@ -29,6 +27,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaconBytes.StarTrekNet.Tests", "..\..\tests\BaconBytes.StarTrekNet.Tests\BaconBytes.StarTrekNet.Tests.csproj", "{72CBD3FE-18C8-465F-ABB9-9B65C6499563}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaconBytes.StarTrekNet", "BaconBytes.StarTrekNet\BaconBytes.StarTrekNet.csproj", "{AC0A77EB-2ECD-4987-AE4D-8ED009BC7834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaconBytes (Classic)", "..\..\modules\BaconBytes\src\BaconBytes (Classic)\BaconBytes (Classic).csproj", "{459D3546-09DD-4B54-8EF0-CCC71B267334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,10 +48,6 @@ Global
 		{8BEA5D1A-70DB-4261-BE92-0492E19C19E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BEA5D1A-70DB-4261-BE92-0492E19C19E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BEA5D1A-70DB-4261-BE92-0492E19C19E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35572FDF-7539-40D0-8BAB-D2CEF166E495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35572FDF-7539-40D0-8BAB-D2CEF166E495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35572FDF-7539-40D0-8BAB-D2CEF166E495}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,15 +64,19 @@ Global
 		{AC0A77EB-2ECD-4987-AE4D-8ED009BC7834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC0A77EB-2ECD-4987-AE4D-8ED009BC7834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC0A77EB-2ECD-4987-AE4D-8ED009BC7834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459D3546-09DD-4B54-8EF0-CCC71B267334}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8BEA5D1A-70DB-4261-BE92-0492E19C19E6} = {1689854F-A0AD-4A24-931E-69EF33B73513}
-		{459D3546-09DD-4B54-8EF0-CCC71B267334} = {82484978-3497-4A4C-92EB-D47118B06BC6}
 		{35572FDF-7539-40D0-8BAB-D2CEF166E495} = {1689854F-A0AD-4A24-931E-69EF33B73513}
 		{54A0C534-08EE-4248-B67F-576F3F44FAE4} = {1689854F-A0AD-4A24-931E-69EF33B73513}
 		{72CBD3FE-18C8-465F-ABB9-9B65C6499563} = {1689854F-A0AD-4A24-931E-69EF33B73513}
+		{459D3546-09DD-4B54-8EF0-CCC71B267334} = {BEB87BF5-B0ED-4918-9730-C9BD9E65B4B4}
 	EndGlobalSection
 EndGlobal

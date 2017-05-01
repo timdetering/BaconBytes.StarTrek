@@ -58,9 +58,8 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\BaconBytes.git\src\BaconBytes %28Classic%29\BaconBytes %28Classic%29.csproj">
+    <ProjectReference Include="..\..\modules\BaconBytes\src\BaconBytes %28Classic%29\BaconBytes %28Classic%29.csproj">
       <Project>{459d3546-09dd-4b54-8ef0-ccc71b267334}</Project>
       <Name>BaconBytes %28Classic%29</Name>
     </ProjectReference>

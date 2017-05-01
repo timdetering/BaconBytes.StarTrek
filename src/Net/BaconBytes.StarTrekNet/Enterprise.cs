@@ -2,7 +2,7 @@
 
 namespace BaconBytes.StarTrekNet
 {
-    internal class Enterprise
+    internal sealed class Enterprise
     {
         internal Enterprise()
         {

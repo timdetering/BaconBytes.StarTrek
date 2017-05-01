@@ -50,11 +50,5 @@
     <Compile Include="Stardate.cs" />
     <Compile Include="StarTrekGame.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaconBytes.git\src\BaconBytes %28Classic%29\BaconBytes %28Classic%29.csproj">
-      <Project>{459d3546-09dd-4b54-8ef0-ccc71b267334}</Project>
-      <Name>BaconBytes %28Classic%29</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,3 @@
+[submodule "modules/BaconBytes"]
+	path = modules/BaconBytes
+	url = https://github.com/timdetering/BaconBytes.git

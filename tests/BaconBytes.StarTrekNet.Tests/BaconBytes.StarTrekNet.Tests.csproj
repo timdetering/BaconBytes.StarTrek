@@ -49,10 +49,6 @@
     <Compile Include="WarpEnginesTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\BaconBytes.git\src\BaconBytes %28Classic%29\BaconBytes %28Classic%29.csproj">
-      <Project>{459d3546-09dd-4b54-8ef0-ccc71b267334}</Project>
-      <Name>BaconBytes %28Classic%29</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\Net\BaconBytes.StarTrekNet\BaconBytes.StarTrekNet.csproj">
       <Project>{ac0a77eb-2ecd-4987-ae4d-8ed009bc7834}</Project>
       <Name>BaconBytes.StarTrekNet</Name>
